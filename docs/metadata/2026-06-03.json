@@ -22,6 +22,13 @@
     "candidate_count": 10,
     "selected_count": 3,
     "has_rejected_rationale": true,
-    "has_credible_sources": true
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "source_url_count": 10,
+    "source_count_matches": true
   }
 }

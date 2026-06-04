@@ -9,9 +9,12 @@ from xml.etree import ElementTree
 from morning_news.validation import validate_metadata
 
 ITUNES_NAMESPACE = "http://www.itunes.com/dtds/podcast-1.0.dtd"
+CONTENT_NAMESPACE = "http://purl.org/rss/1.0/modules/content/"
 HONG_KONG_TZ = timezone(timedelta(hours=8))
+EPISODE_PUB_TIME = time(5, 45)
 
 ElementTree.register_namespace("itunes", ITUNES_NAMESPACE)
+ElementTree.register_namespace("content", CONTENT_NAMESPACE)
 
 
 def build_feed_xml(
@@ -29,7 +32,11 @@ def build_feed_xml(
     _add_text(channel, "link", channel_link)
     _add_text(channel, "description", f"{program_title} podcast feed")
     _add_text(channel, _itunes_tag("author"), "Han")
+    _add_text(channel, _itunes_tag("summary"), f"{program_title} podcast feed")
     _add_text(channel, _itunes_tag("explicit"), "false")
+    _add_text(channel, _itunes_tag("type"), "episodic")
+    category = ElementTree.SubElement(channel, _itunes_tag("category"), {"text": "Business"})
+    ElementTree.SubElement(category, _itunes_tag("category"), {"text": "Investing"})
     if image_path:
         image_url = _absolute_url(site_url, image_path)
         ElementTree.SubElement(channel, _itunes_tag("image"), {"href": image_url})
@@ -43,7 +50,8 @@ def build_feed_xml(
         validate_metadata(episode)
         _add_item(channel, site_url, episode)
 
-    return ElementTree.tostring(rss, encoding="unicode", short_empty_elements=False)
+    body = ElementTree.tostring(rss, encoding="unicode", short_empty_elements=False)
+    return '<?xml version="1.0" encoding="UTF-8"?>\n' + body
 
 
 def _add_item(channel: ElementTree.Element, site_url: str, episode: dict[str, Any]) -> None:
@@ -55,6 +63,8 @@ def _add_item(channel: ElementTree.Element, site_url: str, episode: dict[str, An
     item = ElementTree.SubElement(channel, "item")
     _add_text(item, "title", str(episode["title"]))
     _add_text(item, "description", description)
+    _add_text(item, _content_tag("encoded"), description)
+    _add_text(item, _itunes_tag("summary"), str(episode["summary"]))
     _add_text(item, "pubDate", format_datetime(_episode_pub_datetime(episode)))
     _add_text(item, "guid", show_notes_url, {"isPermaLink": "true"})
     _add_text(item, "link", script_url)
@@ -92,7 +102,7 @@ def _episode_date(episode: dict[str, Any]) -> date:
 
 
 def _episode_pub_datetime(episode: dict[str, Any]) -> datetime:
-    return datetime.combine(_episode_date(episode), time(4, 30), HONG_KONG_TZ)
+    return datetime.combine(_episode_date(episode), EPISODE_PUB_TIME, HONG_KONG_TZ)
 
 
 def _format_duration(duration_seconds: object) -> str:
@@ -107,3 +117,6 @@ def _format_duration(duration_seconds: object) -> str:
 def _itunes_tag(name: str) -> str:
     return f"{{{ITUNES_NAMESPACE}}}{name}"
 
+
+def _content_tag(name: str) -> str:
+    return f"{{{CONTENT_NAMESPACE}}}{name}"

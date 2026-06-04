@@ -23,9 +23,22 @@ Main market line: Growth is resilient, but oil and input-cost pressure are raisi
 
 ## Rejected Stories
 
-- Rejected 1: Isolated single-stock moves outside AI infrastructure were excluded because they did not change the main market line.
-- Rejected 2: Repeated Bitcoin ETF-flow discussion was excluded to avoid overlap with recent Morning Finance Briefing topics.
-- Rejected 3: Minor regional equity-index moves were excluded because the source evidence did not show enough IB/HF relevance.
+- Rejected 1: Isolated single-stock moves outside AI infrastructure were rejected because they did not change the main market line, lacked cross-asset read-through, and would have made the episode feel scattered.
+- Rejected 2: Repeated Bitcoin ETF-flow discussion was rejected because it overlapped with recent Morning Finance Briefing topics and did not add enough fresh HF / IB relevance for this sample.
+- Rejected 3: Minor regional equity-index moves were rejected because the source evidence did not show enough causal detail, market breadth, or IB/HF relevance to justify airtime.
+
+## Humanizer-zh Pass
+
+- Backfill note: this sample was produced before the hard `humanizer-zh` publishing gate was added.
+- Retrospective review used `/Users/han/.agents/skills/humanizer-zh/SKILL.md` as the audit standard and kept the sample because the script is conversational enough for a short channel test.
+- Future production episodes must run the pass before TTS/build, and the show notes must record the concrete wording edits made.
+
+## Editorial QA
+
+- Candidate field check: each candidate includes a source URL, source credibility, asset relevance, and Market / HF / IB relevance.
+- Selection check: the selected stories support the main market line of resilient growth meeting renewed oil/input-cost pressure.
+- Rejected-story check: rejected items were excluded for weak cross-asset impact, recent-topic repetition, or insufficient IB/HF relevance.
+- Source count check: 10 source URLs are listed below and match `source_count=10`.
 
 ## Sources
 

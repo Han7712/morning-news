@@ -24,6 +24,12 @@ def sample_episode() -> dict[str, object]:
             "has_rejected_rationale": True,
             "has_credible_sources": True,
             "humanizer_zh_passed": True,
+            "has_candidate_fields": True,
+            "has_selected_relevance": True,
+            "has_sources_section": True,
+            "has_editorial_qa": True,
+            "source_url_count": 9,
+            "source_count_matches": True,
         },
     }
 
@@ -36,11 +42,19 @@ def test_build_feed_xml_contains_morning_news_channel_artwork_and_episode_links(
         image_path="cover.png",
     )
 
+    assert xml.startswith('<?xml version="1.0" encoding="UTF-8"?>')
+    assert 'xmlns:content="http://purl.org/rss/1.0/modules/content/"' in xml
     assert "<title>Morning News</title>" in xml
+    assert '<itunes:type>episodic</itunes:type>' in xml
+    assert '<itunes:category text="Business">' in xml
+    assert '<itunes:category text="Investing"></itunes:category>' in xml
+    assert "<itunes:summary>Morning News podcast feed</itunes:summary>" in xml
     assert 'url="https://Han7712.github.io/morning-news/audio/2026-06-04-rates-oil-ai.mp3"' in xml
     assert "https://Han7712.github.io/morning-news/scripts/2026-06-04-rates-oil-ai.md" in xml
     assert "https://Han7712.github.io/morning-news/show_notes/2026-06-04-rates-oil-ai.md" in xml
+    assert "<content:encoded>" in xml
     assert "<itunes:duration>10:40</itunes:duration>" in xml
+    assert "05:45:00 +0800" in xml
 
     root = ElementTree.fromstring(xml)
     channel = root.find("channel")

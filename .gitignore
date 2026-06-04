@@ -4,3 +4,4 @@
 __pycache__/
 *.pyc
 *.egg-info/
+.morning-news-build.lock

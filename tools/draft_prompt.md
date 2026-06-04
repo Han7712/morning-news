@@ -20,7 +20,7 @@ Perform thorough online research into the latest financial news from the last 24
 Research quality requirements:
 
 1. Prioritize high-credibility sources: official releases, central banks, statistical agencies, exchanges, company IR, Reuters, Bloomberg where accessible, AP, Financial Times, Wall Street Journal, CNBC, Nikkei Asia, Caixin, South China Morning Post, MarketWatch, Investing.com syndicated Reuters, and reputable regional financial outlets.
-2. Include the U.S. market close and after-close headline scan when available at 04:30 HKT.
+2. Include the U.S. market close and after-close headline scan when available at 05:45 HKT.
 3. Build a candidate list of 8 to 12 credible source-backed stories when the news flow permits.
 4. For each candidate story, capture source URL, timestamp or publication date when visible, source credibility, asset-class relevance, and market / HF / IB relevance.
 5. Select 2 to 4 genuinely important stories for the spoken episode.
@@ -72,6 +72,7 @@ The show notes must include:
 - `## Selected Stories`
 - `## Rejected Stories`
 - `## Humanizer-zh Pass`
+- `## Editorial QA` covering candidate fields, selected-story relevance, rejected-story rationale, and source-count consistency.
 - `## Sources`
 
 ## Build
@@ -93,6 +94,7 @@ Use this command shape, preserving the attached form for rate values:
   --rate=+0% \
   --main-market-line "<main line>" \
   --source-count <number> \
+  --intro-bed assets/audio/intro-bed.mp3 \
   --site-url https://Han7712.github.io/morning-news
 ```
 
@@ -116,5 +118,6 @@ If `tools/build_episode.py` fails:
 7. Verify `https://Han7712.github.io/morning-news/feed.xml` returns HTTP success or report GitHub Pages propagation.
 8. After HTTP success, check the feed body for the new episode title or GUID.
 9. Verify the live MP3 URL returns HTTP success and expected size when available.
+10. Run a byte-range check against the live MP3, for example `curl -H 'Range: bytes=0-1023' -I <mp3-url>`, and report whether the server returns a usable partial-content or full-content response.
 
 Finish with a concise status report naming the date, main market line, episode title, voice, duration, file size, feed URL, live verification result, commit hash, and publishing status.

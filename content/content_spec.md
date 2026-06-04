@@ -4,7 +4,7 @@ Audience: the user wants a practical daily market briefing for investment bankin
 
 Tone: buy-side morning meeting colleague. Calm, direct, source-aware, and explanatory. Do not sound like a professional announcer and do not read a written report aloud.
 
-Schedule context: episodes are generated at 04:30 Asia/Hong_Kong so the U.S. regular equity-market close is usually available.
+Schedule context: episodes are generated at 05:45 Asia/Hong_Kong so the U.S. regular equity-market close and early post-close coverage are usually available.
 
 Length: target 10 to 11 minutes. Start with 2,500 to 3,000 Chinese characters and adjust after measuring full-script duration with `zh-CN-YunyangNeural`.
 
@@ -21,10 +21,12 @@ Research standard:
 
 Research gate:
 - Build an internal candidate list of 8 to 12 credible source-backed stories when the news flow permits.
+- For every candidate, record source URL, timestamp or publication date when visible, source credibility, asset-class relevance, and market / HF / IB relevance.
 - Select 2 to 4 main stories for the spoken episode.
 - Record why each selected story matters today and its market / HF / IB angle.
 - Record why tempting but weak stories were rejected when useful.
 - Exclude minor isolated stock moves, vague opinion pieces, promotional content, and unconfirmed rumors unless market impact is clear and the uncertainty is explicit.
+- Keep an `## Editorial QA` section in show notes covering candidate fields, selected-story relevance, rejected-story rationale, and source-count consistency.
 
 Script structure:
 - Do not use a fixed daily template.
@@ -53,3 +55,8 @@ Judgment style:
 Source handling:
 - Source links belong in show notes and script archive.
 - Do not speak URLs in the episode.
+
+Audio handling:
+- TTS should receive only the clean spoken body, not headings, markdown links, research notes, or source URLs.
+- The final MP3 should include the standard `assets/audio/intro-bed.mp3` music bed with voice fading in from the intro.
+- Normal production episodes must pass the duration gate: target 10 to 11 minutes, with the builder allowing a 9:30 to 12:00 operational band.
