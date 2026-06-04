@@ -13,7 +13,7 @@ The new channel replaces the old PDF-facing Morning Finance Briefing delivery. T
 - Local repository path: `/Users/han/Code/morning-news`
 - Public site URL: `https://Han7712.github.io/morning-news/`
 - Public RSS feed URL: `https://Han7712.github.io/morning-news/feed.xml`
-- Schedule: daily at `02:30 Asia/Hong_Kong`
+- Schedule: daily at `04:30 Asia/Hong_Kong`
 - User-facing format: MP3 podcast episode through RSS/GitHub Pages
 - PDF delivery: stopped, not run as the final delivery path
 - Voice: `zh-CN-YunyangNeural`
@@ -33,7 +33,9 @@ The listener experience should feel like a buy-side morning meeting colleague le
 
 ## Content Requirements
 
-Each episode should be built from fresh public news and official materials from the latest 24-48 hours, with a practical investment banking and hedge fund lens.
+Each episode should be built from thorough online research into fresh public news and official materials from the latest 24-48 hours, with a practical investment banking and hedge fund lens.
+
+The research bar should be closer to a market morning meeting prep note than a casual news skim. The episode should capture the day's must-know financial headlines, not a collection of scattered minor items.
 
 The script should not be a read-aloud report. It should be written for listening:
 
@@ -51,6 +53,26 @@ The structure must be dynamic:
 3. Select 2-4 genuinely important news items for expansion.
 4. Do not evenly allocate time across fixed sections when the news flow is uneven.
 5. End naturally; do not force a fixed "today's watchlist" segment.
+
+Research quality rules:
+
+- Start from high-credibility sources: official releases, central banks, statistical agencies, exchanges, company IR, Reuters, Bloomberg where accessible, AP, Financial Times, Wall Street Journal, CNBC, Nikkei Asia, Caixin, South China Morning Post, MarketWatch, Investing.com syndicated Reuters, and reputable regional financial outlets.
+- Prefer primary sources for data releases, policy decisions, earnings releases, and official calendars.
+- Prefer Reuters/Bloomberg-style market coverage for fast-moving cross-asset reactions, deal news, oil/geopolitics, IPOs, and market closes.
+- Use low-quality aggregation only as a discovery path, not as final evidence, unless it syndicates a reputable wire and clearly identifies the source.
+- For each candidate story, identify the event time, source credibility, affected asset classes, and why the user must know it today.
+- Prioritize headline importance over novelty. A story should be included because it changes macro pricing, risk appetite, sector read-through, capital markets windows, China/HK positioning, or IB/HF decision-making.
+- Exclude isolated minor stock moves, vague opinion pieces, promotional content, and unconfirmed rumors unless they have clear market impact and are framed as unconfirmed.
+- Keep source links in show notes and the script archive.
+
+Research quality gate before scripting:
+
+- Build a candidate story list with at least 8-12 credible source-backed items when the news flow permits.
+- Select 2-4 main stories from that list for the spoken episode.
+- Record a short reason for each selected story: "why it matters today" and "market / HF / IB angle".
+- Record a short reason for notable rejected stories when they look tempting but are too minor, repetitive, stale, or low-credibility.
+- If a major data release or market close is expected around the run time, confirm the latest available source before writing the script.
+- If source evidence is thin or conflicting, say so in the research notes and either exclude the story or present it with calibrated language.
 
 Company-news handling:
 
@@ -113,17 +135,21 @@ The scheduled automation should:
 2. Read Morning News content spec and state.
 3. Read safe MorningBriefing context only from the existing whitelist in `/Users/han/Code/codex-personal-automation/config/settings.json`.
 4. Avoid sensitive-path materials by filename/path keyword.
-5. Search current public news and official materials from the last 24-48 hours.
-6. Avoid obvious repetition against recent Morning News state and archived metadata.
-7. Draft internal research notes with source links.
-8. Convert the research notes into a listening-first podcast script.
-9. Build MP3 with `zh-CN-YunyangNeural`.
-10. Publish the complete episode package to `docs/`.
-11. Run tests.
-12. Commit and push to `origin/main`.
-13. Verify the live feed returns HTTP success.
-14. Verify the live feed body contains the new episode title or GUID.
-15. Verify the live MP3 URL returns HTTP success and expected size.
+5. Perform thorough online research across credible public news and official sources from the last 24-48 hours.
+6. Include the U.S. market close and after-close headline scan when available at `04:30 Asia/Hong_Kong`.
+7. Build a candidate story list with source links, timestamps, credibility notes, asset-class relevance, and IB/HF relevance.
+8. Apply the research quality gate and select 2-4 main stories.
+9. Avoid obvious repetition against recent Morning News state and archived metadata.
+10. Draft internal research notes with source links, selected-story rationale, and rejected-story rationale.
+11. Convert the research notes into a listening-first podcast script.
+12. Run a script quality check for listenability, calibrated judgment, dynamic structure, and source-backed claims.
+13. Build MP3 with `zh-CN-YunyangNeural`.
+14. Publish the complete episode package to `docs/`.
+15. Run tests.
+16. Commit and push to `origin/main`.
+17. Verify the live feed returns HTTP success.
+18. Verify the live feed body contains the new episode title or GUID.
+19. Verify the live MP3 URL returns HTTP success and expected size.
 
 ## PDF Replacement Rules
 
@@ -138,6 +164,10 @@ Morning News directly replaces PDF delivery:
 
 A successful daily run must verify:
 
+- Research notes exist and contain a candidate story list, selected-story rationale, rejected-story rationale, and source links.
+- Selected stories are sourced from credible public or official materials.
+- The episode main line is explicitly stated before scripting.
+- The script passes a content quality check for headline relevance, source support, listenability, and calibrated judgment.
 - `tools/build_episode.py` exits successfully.
 - Delivery report exists and has `ok=true`.
 - MP3 exists and `afinfo` can read a positive duration.
@@ -178,7 +208,7 @@ The generated candidate image should be copied into the repository as `docs/cove
 
 ## Risks and Open Follow-Ups
 
-- GitHub remote creation and first push require confirming or creating a private/public repository target; user approved public feed, so the repository can be public unless the user later says otherwise.
+- GitHub remote creation and first push require confirming or creating a private/public repository target; user approved public feed, so the repository can be public unless the user changes this decision.
 - Apple Podcasts directory submission is separate from RSS feed publishing. The first implementation should make the RSS feed valid and publicly reachable; directory submission can be handled after the feed works.
 - `zh-CN-YunyangNeural` duration must be measured on full scripts; target script length may need adjustment after one real build.
 - Public feed content can include source links and show notes, so avoid sensitive local context and never include sensitive-path-derived material.
