@@ -24,3 +24,31 @@ The daily automation must perform thorough online research from credible public 
 ./.venv/bin/python -m pip install -e ".[dev]"
 ./.venv/bin/python -m pytest -q
 ```
+
+## Build an Episode
+
+Draft the script and show notes outside `docs/`, then run `tools/build_episode.py`. The builder validates script style and research quality before it writes audio, feed, metadata, and index files.
+
+```bash
+./.venv/bin/python tools/build_episode.py \
+  --date 2026-06-04 \
+  --slug rates-oil-ai \
+  --title "Rates, Oil, and AI Capex" \
+  --summary "A source-backed market morning briefing." \
+  --keywords "rates,oil,AI capex" \
+  --script /tmp/morning-news-2026-06-04-script.md \
+  --show-notes /tmp/morning-news-2026-06-04-show-notes.md \
+  --voice zh-CN-YunyangNeural \
+  --rate=+0% \
+  --main-market-line "Growth is resilient but oil is raising the inflation cost." \
+  --source-count 9 \
+  --site-url https://Han7712.github.io/morning-news
+```
+
+## Automation
+
+The local Codex automation prompt lives at:
+
+`/Users/han/.codex/automations/morning-news/automation.toml`
+
+It is scheduled for daily `04:30 Asia/Hong_Kong` and requires thorough online research, candidate story QA, selected/rejected rationale, MP3/RSS publishing, tests, commit/push, and live feed verification.
