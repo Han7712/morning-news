@@ -32,6 +32,13 @@ Script structure:
 - Use that main line to connect macro data, asset prices, company events, financing, China/Hong Kong, and Asia when relevant.
 - Do not force a fixed "today's watchlist" ending.
 
+Humanizer pass:
+- After the first script draft is complete and before TTS/build, run the script through `humanizer-zh`.
+- Preferred skill source: `/Users/han/.agents/skills/humanizer-zh/SKILL.md`.
+- Keep the factual claims, figures, source-backed caveats, and market logic intact.
+- Revise formulaic transitions, overly symmetrical sentence structures, generic AI phrases, inflated significance language, and stiff report-style phrasing.
+- Preserve a `## Humanizer-zh Pass` section in show notes that names the skill path and summarizes the edits. The builder refuses to publish if this audit section is missing.
+
 Company-news rule:
 - Introduce what the company does before giving figures.
 - Explain its industry-chain position.
@@ -46,4 +53,3 @@ Judgment style:
 Source handling:
 - Source links belong in show notes and script archive.
 - Do not speak URLs in the episode.
-

@@ -44,6 +44,20 @@ Script requirements:
 8. Avoid the correction-style sentence pattern "不是A，而是B".
 9. Keep URLs out of the spoken script; preserve source links in show notes.
 
+## Humanizer-zh Pass
+
+After writing the first complete script draft and before running `tools/build_episode.py`, run the script through `humanizer-zh`.
+
+Use the surfaced skill if available. If it is not surfaced by the runtime, read and follow `/Users/han/.agents/skills/humanizer-zh/SKILL.md`.
+
+Humanizer requirements:
+
+1. Keep source-backed facts, figures, institutions, timing, and market logic intact.
+2. Remove formulaic AI writing patterns: generic connective phrases, inflated significance language, symmetrical "not X but Y" structures, stiff report-style transitions, and overly polished slogan-like endings.
+3. Make the script sound like a real market colleague speaking into audio, while preserving the finance precision.
+4. Do not add unsupported claims or new sources during this pass.
+5. Add a `## Humanizer-zh Pass` section to show notes naming the skill path and summarizing the edits. The builder will reject the episode if this section is missing.
+
 ## Required Draft Files
 
 Create temporary draft files outside `docs/` first:
@@ -57,6 +71,7 @@ The show notes must include:
 - `## Candidate Stories`
 - `## Selected Stories`
 - `## Rejected Stories`
+- `## Humanizer-zh Pass`
 - `## Sources`
 
 ## Build
@@ -103,4 +118,3 @@ If `tools/build_episode.py` fails:
 9. Verify the live MP3 URL returns HTTP success and expected size when available.
 
 Finish with a concise status report naming the date, main market line, episode title, voice, duration, file size, feed URL, live verification result, commit hash, and publishing status.
-

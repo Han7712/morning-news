@@ -75,6 +75,9 @@ def validate_metadata(metadata: dict[str, Any]) -> None:
     if research_quality.get("has_rejected_rationale") is not True:
         raise ValueError("Metadata research_quality.has_rejected_rationale must be true")
 
+    if research_quality.get("humanizer_zh_passed") is not True:
+        raise ValueError("Metadata research_quality.humanizer_zh_passed must be true")
+
 
 def _has_main_market_line(text: str) -> bool:
     lowered = text.lower()
@@ -88,4 +91,3 @@ def _has_source_marker(text: str) -> bool:
 
 def _chinese_and_ascii_body(text: str) -> str:
     return re.sub(r"\s+", "", text)
-

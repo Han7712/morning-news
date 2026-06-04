@@ -17,6 +17,8 @@ Each episode is a listening-first market briefing, not a read-aloud report. The 
 
 The daily automation must perform thorough online research from credible public news and official sources, build a candidate story list, select the 2-4 stories that matter most, and preserve source links in show notes.
 
+After the first script draft is complete, run it through `humanizer-zh` before TTS/build. Use `/Users/han/.agents/skills/humanizer-zh/SKILL.md` when the skill is not surfaced directly by the runtime. The show notes must include a `## Humanizer-zh Pass` section naming the skill path and summarizing the natural-language edits; the builder treats that as a required publishing gate.
+
 ## Local Commands
 
 ```bash

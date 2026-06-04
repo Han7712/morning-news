@@ -26,6 +26,7 @@ def valid_metadata() -> dict[str, object]:
             "selected_count": 3,
             "has_rejected_rationale": True,
             "has_credible_sources": True,
+            "humanizer_zh_passed": True,
         },
     }
 
@@ -49,9 +50,24 @@ def test_validate_metadata_rejects_weak_research_gate() -> None:
         "selected_count": 1,
         "has_rejected_rationale": False,
         "has_credible_sources": True,
+        "humanizer_zh_passed": True,
     }
 
     with pytest.raises(ValueError, match="candidate_count"):
+        validate_metadata(metadata)
+
+
+def test_validate_metadata_rejects_missing_humanizer_zh_pass() -> None:
+    metadata = valid_metadata()
+    metadata["research_quality"] = {
+        "candidate_count": 10,
+        "selected_count": 3,
+        "has_rejected_rationale": True,
+        "has_credible_sources": True,
+        "humanizer_zh_passed": False,
+    }
+
+    with pytest.raises(ValueError, match="humanizer_zh_passed"):
         validate_metadata(metadata)
 
 
@@ -78,4 +94,3 @@ def test_detect_script_violations_requires_main_line_and_sources() -> None:
         "missing_source_marker",
         "script_too_short",
     ]
-

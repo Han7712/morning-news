@@ -40,6 +40,9 @@ def valid_show_notes(tmp_path: Path) -> Path:
         "- China services: why it matters today; market / HF / IB angle: HK tech risk appetite.\n\n"
         "## Rejected Stories\n"
         "- Minor single-stock move rejected because impact was narrow and low-credibility.\n\n"
+        "## Humanizer-zh Pass\n"
+        "- Applied `/Users/han/.agents/skills/humanizer-zh/SKILL.md` after the first script draft.\n"
+        "- Revised formulaic transitions and sentence rhythm before TTS.\n\n"
         "## Sources\n"
         "- Reuters: https://example.com/reuters\n"
         "- Federal Reserve: https://example.com/fed\n",
@@ -117,6 +120,7 @@ def test_successful_build_publishes_complete_episode_package(tmp_path: Path, mon
     assert metadata["main_market_line"] == "Growth is resilient but oil is raising the inflation cost."
     assert metadata["research_quality"]["candidate_count"] == 10
     assert metadata["research_quality"]["selected_count"] == 3
+    assert metadata["research_quality"]["humanizer_zh_passed"] is True
     assert (tmp_path / "docs/feed.xml").read_text(encoding="utf-8").count("<item>") == 1
     index_html = (tmp_path / "docs/index.html").read_text(encoding="utf-8")
     assert 'rel="alternate" type="application/rss+xml"' in index_html
@@ -162,6 +166,32 @@ def test_research_failure_writes_report_before_tts(tmp_path: Path, monkeypatch) 
     assert exit_code == 2
     assert report["ok"] is False
     assert report["stage"] == "research_validation"
+
+
+def test_research_failure_requires_humanizer_zh_pass(tmp_path: Path, monkeypatch) -> None:
+    script_path = long_script(tmp_path)
+    show_notes_path = valid_show_notes(tmp_path)
+    notes = show_notes_path.read_text(encoding="utf-8")
+    notes = notes.replace(
+        "## Humanizer-zh Pass\n"
+        "- Applied `/Users/han/.agents/skills/humanizer-zh/SKILL.md` after the first script draft.\n"
+        "- Revised formulaic transitions and sentence rhythm before TTS.\n\n",
+        "",
+    )
+    show_notes_path.write_text(notes, encoding="utf-8")
+    configure_cli(monkeypatch, tmp_path, script_path, show_notes_path)
+
+    exit_code = build_episode.main()
+
+    report = json.loads(
+        (tmp_path / "docs/reports/2026-06-04-delivery_report.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert exit_code == 2
+    assert report["ok"] is False
+    assert report["stage"] == "research_validation"
+    assert "missing_humanizer_zh_pass" in report["message"]
 
 
 def test_tts_failure_preserves_existing_audio(tmp_path: Path, monkeypatch) -> None:

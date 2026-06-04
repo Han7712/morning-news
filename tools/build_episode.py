@@ -195,6 +195,7 @@ def research_quality_from_show_notes(show_notes: str) -> dict[str, Any]:
         "selected_count": selected_count,
         "has_rejected_rationale": rejected_count > 0,
         "has_credible_sources": len(source_links) >= 2,
+        "humanizer_zh_passed": _has_humanizer_zh_pass(show_notes),
     }
 
 
@@ -209,20 +210,37 @@ def validate_research_notes(show_notes: str) -> list[str]:
         violations.append("missing_rejected_rationale")
     if not quality["has_credible_sources"]:
         violations.append("missing_credible_source_links")
+    if not quality["humanizer_zh_passed"]:
+        violations.append("missing_humanizer_zh_pass")
     if "Main market line:" not in show_notes and "主线" not in show_notes:
         violations.append("missing_main_market_line")
     return violations
 
 
 def _section_bullet_count(markdown: str, section_title: str) -> int:
+    section_body = _section_body(markdown, section_title)
+    if section_body is None:
+        return 0
+    return len(re.findall(r"^\s*[-*]\s+", section_body, flags=re.MULTILINE))
+
+
+def _section_body(markdown: str, section_title: str) -> str | None:
     pattern = re.compile(
         rf"^##\s+{re.escape(section_title)}\s*$([\s\S]*?)(?=^##\s+|\Z)",
         re.MULTILINE,
     )
     match = pattern.search(markdown)
     if not match:
-        return 0
-    return len(re.findall(r"^\s*[-*]\s+", match.group(1), flags=re.MULTILINE))
+        return None
+    return match.group(1)
+
+
+def _has_humanizer_zh_pass(show_notes: str) -> bool:
+    section_body = _section_body(show_notes, "Humanizer-zh Pass")
+    if section_body is None:
+        return False
+    lowered = section_body.lower()
+    return "humanizer-zh" in lowered and "skill.md" in lowered
 
 
 class BuildStageError(Exception):

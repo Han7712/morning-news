@@ -23,6 +23,7 @@ def sample_episode() -> dict[str, object]:
             "selected_count": 3,
             "has_rejected_rationale": True,
             "has_credible_sources": True,
+            "humanizer_zh_passed": True,
         },
     }
 
@@ -87,4 +88,3 @@ def test_build_feed_xml_sorts_newest_episode_first() -> None:
     assert channel is not None
     titles = [item.findtext("title") for item in channel.findall("item")]
     assert titles == ["Rates, Oil, and AI Capex", "Older Episode"]
-
