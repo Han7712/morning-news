@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-03",
+  "slug": "sample-oil-rates-ai",
+  "title": "Sample Briefing: Oil, Rates, and AI Capex",
+  "summary": "A short formal Morning News sample episode for Apple Podcasts follow testing.",
+  "keywords": [
+    "rates",
+    "oil",
+    "AI capex",
+    "SpaceX",
+    "China services"
+  ],
+  "audio_path": "audio/2026-06-03-sample-oil-rates-ai.mp3",
+  "script_path": "scripts/2026-06-03-sample-oil-rates-ai.md",
+  "show_notes_path": "show_notes/2026-06-03-sample-oil-rates-ai.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 340,
+  "file_size_bytes": 2043792,
+  "main_market_line": "Growth is resilient, but oil and input-cost pressure are raising the inflation cost of the risk-on trade.",
+  "source_count": 10,
+  "research_quality": {
+    "candidate_count": 10,
+    "selected_count": 3,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true
+  }
+}

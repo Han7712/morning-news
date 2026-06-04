@@ -4,7 +4,3 @@
 __pycache__/
 *.pyc
 *.egg-info/
-docs/audio/*.mp3
-!docs/audio/.gitkeep
-docs/reports/*.json
-!docs/reports/.gitkeep

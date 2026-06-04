@@ -1,9 +1,12 @@
 {
-  "last_episode_date": null,
-  "last_slug": null,
-  "recent_main_lines": [],
-  "used_slugs": [],
+  "last_episode_date": "2026-06-03",
+  "last_slug": "sample-oil-rates-ai",
+  "recent_main_lines": [
+    "Growth is resilient, but oil and input-cost pressure are raising the inflation cost of the risk-on trade."
+  ],
+  "used_slugs": [
+    "sample-oil-rates-ai"
+  ],
   "selected_voice": "zh-CN-YunyangNeural",
   "selected_rate": "+0%"
 }
-
