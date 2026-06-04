@@ -1,0 +1,10 @@
+.DS_Store
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+docs/audio/*.mp3
+!docs/audio/.gitkeep
+docs/reports/*.json
+!docs/reports/.gitkeep
+

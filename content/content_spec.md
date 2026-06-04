@@ -1,0 +1,49 @@
+# Morning News Content Spec
+
+Audience: the user wants a practical daily market briefing for investment banking, hedge fund thinking, research reading, and market judgment.
+
+Tone: buy-side morning meeting colleague. Calm, direct, source-aware, and explanatory. Do not sound like a professional announcer and do not read a written report aloud.
+
+Schedule context: episodes are generated at 04:30 Asia/Hong_Kong so the U.S. regular equity-market close is usually available.
+
+Length: target 10 to 11 minutes. Start with 2,500 to 3,000 Chinese characters and adjust after measuring full-script duration with `zh-CN-YunyangNeural`.
+
+Voice: `zh-CN-YunyangNeural`.
+
+Language: Chinese first. Use English only for market terms where Chinese is less natural, such as `risk-on`, `higher for longer`, `AI capex`, `soft landing`, `ECM`, `IPO`, `spread`, and `duration`.
+
+Research standard:
+- Search current public news and official materials from the last 24 to 48 hours.
+- Start from official releases, central banks, statistical agencies, exchanges, company IR, Reuters, Bloomberg where accessible, AP, Financial Times, Wall Street Journal, CNBC, Nikkei Asia, Caixin, South China Morning Post, MarketWatch, Investing.com syndicated Reuters, and reputable regional financial outlets.
+- Prefer primary sources for data releases, policy decisions, earnings, and official calendars.
+- Prefer wire-quality market coverage for cross-asset reactions, deal news, oil/geopolitics, IPOs, and market closes.
+- Use low-quality aggregation only for discovery, not final evidence, unless it clearly syndicates a reputable wire.
+
+Research gate:
+- Build an internal candidate list of 8 to 12 credible source-backed stories when the news flow permits.
+- Select 2 to 4 main stories for the spoken episode.
+- Record why each selected story matters today and its market / HF / IB angle.
+- Record why tempting but weak stories were rejected when useful.
+- Exclude minor isolated stock moves, vague opinion pieces, promotional content, and unconfirmed rumors unless market impact is clear and the uncertainty is explicit.
+
+Script structure:
+- Do not use a fixed daily template.
+- First determine the day's most important market main line.
+- Use that main line to connect macro data, asset prices, company events, financing, China/Hong Kong, and Asia when relevant.
+- Do not force a fixed "today's watchlist" ending.
+
+Company-news rule:
+- Introduce what the company does before giving figures.
+- Explain its industry-chain position.
+- Explain why markets care.
+- Then give revenue, valuation, IPO, capex, or deal figures.
+
+Judgment style:
+- Prefer calibrated phrases such as "market may read this as", "I would first treat this as a signal", and "the more important point is".
+- Avoid overconfident conclusions while events are still developing.
+- Avoid the correction-style sentence pattern "不是A，而是B".
+
+Source handling:
+- Source links belong in show notes and script archive.
+- Do not speak URLs in the episode.
+
