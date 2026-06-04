@@ -105,7 +105,11 @@ def write_index(
         [
             "<!doctype html>",
             '<html lang="zh-CN">',
-            '<head><meta charset="utf-8"><title>Morning News</title></head>',
+            "<head>",
+            '<meta charset="utf-8">',
+            "<title>Morning News</title>",
+            f'<link rel="alternate" type="application/rss+xml" title="Morning News" href="{feed_url}">',
+            "</head>",
             "<body>",
             "<h1>Morning News</h1>",
             *cover_rows,
@@ -395,4 +399,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

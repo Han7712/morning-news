@@ -118,9 +118,10 @@ def test_successful_build_publishes_complete_episode_package(tmp_path: Path, mon
     assert metadata["research_quality"]["candidate_count"] == 10
     assert metadata["research_quality"]["selected_count"] == 3
     assert (tmp_path / "docs/feed.xml").read_text(encoding="utf-8").count("<item>") == 1
-    assert "show_notes/2026-06-04-rates-oil-ai.md" in (
-        tmp_path / "docs/index.html"
-    ).read_text(encoding="utf-8")
+    index_html = (tmp_path / "docs/index.html").read_text(encoding="utf-8")
+    assert 'rel="alternate" type="application/rss+xml"' in index_html
+    assert "https://Han7712.github.io/morning-news/feed.xml" in index_html
+    assert "show_notes/2026-06-04-rates-oil-ai.md" in index_html
 
 
 def test_style_failure_writes_report_and_preserves_existing_feed(tmp_path: Path, monkeypatch) -> None:
