@@ -84,8 +84,8 @@ def mix_intro_with_voice(
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     filter_complex = (
-        "[0:a]volume=0.22,afade=t=in:st=0:d=0.8,afade=t=out:st=5.0:d=3.0[intro];"
-        "[1:a]adelay=2500|2500,afade=t=in:st=2.5:d=2.5[voice];"
+        "[0:a]volume=0.58,afade=t=out:st=5.9:d=1.25[intro];"
+        "[1:a]adelay=5900|5900[voice];"
         "[intro][voice]amix=inputs=2:duration=longest:dropout_transition=1[a]"
     )
     command = [

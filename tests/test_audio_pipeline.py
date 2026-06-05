@@ -49,7 +49,7 @@ def test_extract_spoken_body_falls_back_to_markdown_body_until_sources() -> None
     assert spoken == "主线：风险资产继续交易降息预期。"
 
 
-def test_mix_intro_with_voice_invokes_ffmpeg_with_music_bed_and_voice_fade(
+def test_mix_intro_with_voice_invokes_ffmpeg_with_intro_duck_and_normal_voice_entry(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -72,8 +72,9 @@ def test_mix_intro_with_voice_invokes_ffmpeg_with_music_bed_and_voice_fade(
 
     assert output_path.read_bytes() == b"mixed"
     command = " ".join(calls[0])
-    assert "adelay=2500|2500" in command
-    assert "afade=t=in:st=2.5:d=2.5" in command
+    assert "adelay=5900|5900" in command
+    assert "afade=t=out:st=5.9" in command
+    assert "afade=t=in" not in command
     assert "amix=inputs=2:duration=longest" in command
 
 
