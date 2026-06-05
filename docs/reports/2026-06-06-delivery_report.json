@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "date": "2026-06-06",
+  "audio_path": "/Users/han/Code/morning-news/docs/audio/2026-06-06-hot-payrolls-ai-hk-flow-risk.mp3",
+  "script_path": "/Users/han/Code/morning-news/docs/scripts/2026-06-06-hot-payrolls-ai-hk-flow-risk.md",
+  "show_notes_path": "/Users/han/Code/morning-news/docs/show_notes/2026-06-06-hot-payrolls-ai-hk-flow-risk.md",
+  "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-06.json",
+  "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Code/morning-news/docs/index.html",
+  "duration_seconds": 644,
+  "file_size_bytes": 15467373,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "强劲美国非农把市场从 soft landing 的宽松想象拉回 higher for longer，拥挤的 AI 和半导体仓位先被卖；油价回落、香港资金审查和 SpaceX 指数规则同时提醒我们，今天要重新给 duration、流动性和被动资金溢价定价。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}
