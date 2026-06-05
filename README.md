@@ -52,24 +52,8 @@ Draft the script and show notes outside `docs/`, then run `tools/build_episode.p
 
 ## Automation
 
-The source prompt lives at:
-
-`/Users/han/Code/morning-news/tools/draft_prompt.md`
-
-The reliable local scheduler is a macOS LaunchAgent:
-
-`/Users/han/Library/LaunchAgents/com.han.morning-news.plist`
-
-It runs:
-
-`/Users/han/Code/morning-news/automation/run_morning_news.sh`
-
-The runner calls `codex exec --search` daily at `05:45 Asia/Hong_Kong`, writes logs under:
-
-`/Users/han/.codex/automations/morning-news/logs/`
-
-The earlier Codex-local automation record is kept for recovery/context:
+The local Codex automation prompt lives at:
 
 `/Users/han/.codex/automations/morning-news/automation.toml`
 
-Do not treat the local TOML/SQLite record as proof that the task is visible in the Codex Automation UI. The LaunchAgent is the operative fallback scheduler unless a formal Codex Automation entry is created through the official UI/API.
+It is scheduled for daily `05:45 Asia/Hong_Kong` and requires thorough online research, candidate story QA, selected/rejected rationale, humanizer-zh pass, duration validation, MP3/RSS publishing, tests, commit/push, and live feed verification.
