@@ -1,10 +1,12 @@
 {
-  "last_episode_date": "2026-06-03",
-  "last_slug": "sample-oil-rates-ai",
+  "last_episode_date": "2026-06-05",
+  "last_slug": "conditional-risk-on-ai-hk-flows",
   "recent_main_lines": [
+    "油价和长端收益率回落让 risk-on 从少数 AI 龙头扩散到银行、小盘和传统周期股，但 Broadcom 的回撤和香港金融股的压力说明，市场现在给的是有条件的风险偏好，不是随便什么高估值、跨境流量故事都能一起涨。",
     "Growth is resilient, but oil and input-cost pressure are raising the inflation cost of the risk-on trade."
   ],
   "used_slugs": [
+    "conditional-risk-on-ai-hk-flows",
     "sample-oil-rates-ai"
   ],
   "selected_voice": "zh-CN-YunyangNeural",

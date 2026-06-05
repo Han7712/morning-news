@@ -1,0 +1,36 @@
+{
+  "date": "2026-06-05",
+  "slug": "conditional-risk-on-ai-hk-flows",
+  "title": "Conditional Risk-On, AI Discipline, and HK Flow Risk",
+  "summary": "Oil and yields eased enough to broaden risk appetite, but Broadcom's selloff, AI-linked layoffs, and Hong Kong financial-share pressure kept the rally conditional.",
+  "keywords": [
+    "risk-on",
+    "Broadcom",
+    "AI capex",
+    "labor market",
+    "Hong Kong financials",
+    "capital controls"
+  ],
+  "audio_path": "audio/2026-06-05-conditional-risk-on-ai-hk-flows.mp3",
+  "script_path": "scripts/2026-06-05-conditional-risk-on-ai-hk-flows.md",
+  "show_notes_path": "show_notes/2026-06-05-conditional-risk-on-ai-hk-flows.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 652,
+  "file_size_bytes": 13054125,
+  "main_market_line": "油价和长端收益率回落让 risk-on 从少数 AI 龙头扩散到银行、小盘和传统周期股，但 Broadcom 的回撤和香港金融股的压力说明，市场现在给的是有条件的风险偏好，不是随便什么高估值、跨境流量故事都能一起涨。",
+  "source_count": 10,
+  "research_quality": {
+    "candidate_count": 11,
+    "selected_count": 4,
+    "rejected_count": 4,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "source_url_count": 10,
+    "source_count_matches": true
+  }
+}
