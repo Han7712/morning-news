@@ -16,7 +16,6 @@ Main market line: 周末没有新的美股现金盘，新线索在 Friday shock 
 - Candidate 10: Reuters reported that SpaceX underwriters barred China and Hong Kong investors from the IPO because of regulatory and compliance concerns, and Reuters could not access IPO materials from Hong Kong and mainland China. Source credibility: Reuters-syndicated IPO access coverage. Asset relevance: ECM, China/HK capital flows, private banking allocations. Market / HF / IB relevance: shows that headline IPO demand is constrained by jurisdictional access and compliance. https://www.investing.com/news/stock-market-news/spacex-ipo-bars-investors-from-china-and-hong-kong-bloomberg-news-reports-4728237
 - Candidate 11: Reuters-syndicated Hong Kong coverage said AIA, HSBC, Standard Chartered and Bank of East Asia fell on concerns about tighter mainland capital controls and Hong Kong account scrutiny; HKMA documents require extra controls for Chinese Mainland investors' investment accounts. Source credibility: Reuters-syndicated market coverage plus official HKMA circular. Asset relevance: Hong Kong financials, insurers, banks, China capital flow. Market / HF / IB relevance: affects wealth-management revenue, IPO participation, and cross-border liquidity assumptions. https://uk.marketscreener.com/news/hong-kong-listed-shares-of-aia-hsbc-and-stanchart-fall-as-china-tightens-capital-controls-ce7f5dddda8ff027
 - Candidate 12: Eurostat reported euro-area Q1 GDP fell 0.2% while employment rose 0.1%; Reuters said the ECB is expected to hike next week as energy-driven inflation pressure persists after the Iran war. Source credibility: official EU statistical agency plus Reuters central-bank preview. Asset relevance: euro rates, EUR, European equities, global duration. Market / HF / IB relevance: extends the higher-for-longer problem beyond the U.S. into European financing costs. https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-05062026-ap
-- Candidate 13: Investing.com reported Bitcoin rebounded above US$61,000 after briefly falling below US$60,000, with about US$1.6bn in liquidation-driven selling tied to the broader selloff after strong U.S. jobs data. Source credibility: reputable market-data and news site. Asset relevance: crypto, liquidity, risk appetite. Market / HF / IB relevance: acts as a weekend stress gauge for leveraged risk positioning. https://www.investing.com/news/cryptocurrency-news/bitcoin-rebounds-above-61000-after-16-billion-liquidationdriven-selloff-4729561
 
 ## Selected Stories
 
@@ -27,7 +26,7 @@ Main market line: 周末没有新的美股现金盘，新线索在 Friday shock 
 
 ## Rejected Stories
 
-- Rejected 1: OPEC+ July-output speculation was rejected because the June 7 meeting result was not yet available at the 05:45 HKT research window, and older previews added less incremental value than the live oil, rates, ECB and equity-market signals.
+- Rejected 1: OPEC+ July-output speculation was rejected because the June 7 meeting result was not yet available at the 05:45 HKT research window, and older previews added less incremental value than the live rates, ECB and equity-market signals.
 - Rejected 2: Lululemon's guidance cut was rejected because it was a visible Friday mover but had narrower market relevance than jobs, rates, AI capex, SpaceX, and Hong Kong cross-border liquidity.
 - Rejected 3: China services PMI from June 3 was rejected because it was outside the tight 24-48 hour news window and had already been overtaken by more direct market-moving capital-flow and policy stories.
 - Rejected 4: Social-media crypto and chip-dip commentary was rejected because it was lower-credibility than official releases, AP, Reuters-syndicated coverage, Eurostat, S&P Dow Jones Indices, and HKMA documents.
@@ -35,7 +34,7 @@ Main market line: 周末没有新的美股现金盘，新线索在 Friday shock 
 ## Humanizer-zh Pass
 
 - Used `/Users/han/.agents/skills/humanizer-zh/SKILL.md`.
-- After the first complete draft, revised the script toward spoken Chinese by shortening report-like transitions, reducing generic connective phrases, removing slogan-like endings, and keeping the speaker voice closer to a buy-side morning colleague.
+- After the first complete draft, revised the script toward spoken Chinese by shortening report-like transitions, reducing generic connective phrases, removing slogan-like endings, avoiding the banned correction-style pattern, and keeping the speaker voice closer to a buy-side morning colleague.
 - Preserved source-backed facts, figures, institutions, publication timing, caveats, and market logic during the humanizer-zh pass.
 
 ## Editorial QA
