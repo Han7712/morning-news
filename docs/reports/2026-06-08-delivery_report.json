@@ -1,8 +1,17 @@
 {
-  "ok": false,
+  "ok": true,
   "date": "2026-06-08",
-  "stage": "duplicate_episode",
-  "error_type": "ValueError",
-  "message": "same date already has slug 'funding-costs-ai-oil-friction'; refusing to replace with 'funding-cost-ai-oil-hk-friction'",
-  "preserve_existing": true
+  "audio_path": "/Users/han/Code/morning-news/docs/audio/2026-06-08-funding-costs-ai-oil-friction.mp3",
+  "script_path": "/Users/han/Code/morning-news/docs/scripts/2026-06-08-funding-costs-ai-oil-friction.md",
+  "show_notes_path": "/Users/han/Code/morning-news/docs/show_notes/2026-06-08-funding-costs-ai-oil-friction.md",
+  "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-08.json",
+  "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Code/morning-news/docs/index.html",
+  "duration_seconds": 664,
+  "file_size_bytes": 15950061,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，强非农把市场拉回 higher for longer，AI capex 和 SpaceX IPO 把资金需求推到台前；OPEC+ 的小幅增产挡不住 Hormuz 风险，香港账户审查和欧洲加息预期说明，下周交易要先问资金成本和流动性通道，再问增长故事。",
+  "site_url": "https://Han7712.github.io/morning-news"
 }
