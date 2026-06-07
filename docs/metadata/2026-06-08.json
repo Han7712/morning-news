@@ -1,0 +1,37 @@
+{
+  "date": "2026-06-08",
+  "slug": "funding-costs-ai-oil-friction",
+  "title": "2026-06-08 资金成本先行",
+  "summary": "强非农、AI capex 融资、OPEC+ 小幅增产与香港账户审查共同指向资金成本和流动性通道重估。",
+  "keywords": [
+    "Fed",
+    "AI capex",
+    "OPEC",
+    "Hormuz",
+    "SpaceX",
+    "HK flows",
+    "ECB"
+  ],
+  "audio_path": "audio/2026-06-08-funding-costs-ai-oil-friction.mp3",
+  "script_path": "scripts/2026-06-08-funding-costs-ai-oil-friction.md",
+  "show_notes_path": "show_notes/2026-06-08-funding-costs-ai-oil-friction.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 664,
+  "file_size_bytes": 15954093,
+  "main_market_line": "今天的主线是，强非农把市场拉回 higher for longer，AI capex 和 SpaceX IPO 把资金需求推到台前；OPEC+ 的小幅增产挡不住 Hormuz 风险，香港账户审查和欧洲加息预期说明，下周交易要先问资金成本和流动性通道，再问增长故事。",
+  "source_count": 14,
+  "research_quality": {
+    "candidate_count": 14,
+    "selected_count": 4,
+    "rejected_count": 4,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "source_url_count": 14,
+    "source_count_matches": true
+  }
+}

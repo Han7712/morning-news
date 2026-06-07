@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "date": "2026-06-08",
+  "stage": "duplicate_episode",
+  "error_type": "ValueError",
+  "message": "same date already has slug 'funding-costs-ai-oil-friction'; refusing to replace with 'funding-cost-ai-oil-hk-friction'",
+  "preserve_existing": true
+}
