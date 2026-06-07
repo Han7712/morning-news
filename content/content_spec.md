@@ -10,7 +10,7 @@ Length: target 10 to 11 minutes. Start with 2,500 to 3,000 Chinese characters an
 
 Voice: `zh-CN-YunyangNeural`.
 
-Language: Chinese first. Use English only for market terms where Chinese is less natural, such as `risk-on`, `higher for longer`, `AI capex`, `soft landing`, `IPO`, `spread`, and `duration`. For TTS-sensitive proper nouns, write the spoken form in Chinese: `S&P 500` -> `标普五百指数`, `Dow` or `Dow Jones` -> `道琼斯指数`, `Nasdaq` -> `纳斯达克`, `Russell 2000` -> `罗素二千指数`, `Fed` -> `美联储`, `ECB` -> `欧洲央行`, `HKMA` -> `香港金管局`, `ECM` -> `股权资本市场`, `HF` -> `对冲基金`, `IB` -> `投行业务`.
+Language: Chinese first. Keep professional finance terms in the form a market professional would naturally say them, such as `risk-on`, `higher for longer`, `AI capex`, `soft landing`, `IPO`, `ECM`, `ROIC`, `ECB`, `HKMA`, `Nasdaq`, `spread`, and `duration`. For TTS-sensitive terms, use or allow the spoken form: `S&P 500` -> `标普500指数`, standalone `S&P` -> `标普`, `Dow` or `Dow Jones` -> `道指`, and `HF` -> `hedge fund`. Do not over-translate common finance acronyms.
 
 Research standard:
 - Search current public news and official materials from the last 24 to 48 hours.

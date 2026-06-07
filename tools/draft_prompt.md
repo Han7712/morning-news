@@ -38,12 +38,12 @@ Script requirements:
 2. Tone: buy-side morning meeting colleague, not professional announcer.
 3. First determine the day's main market line, then use it to connect macro data, asset prices, company events, financing, China/Hong Kong, and Asia where relevant.
 4. Do not use a fixed daily template and do not force a fixed "today's watchlist" ending.
-5. Use English only for market terms where Chinese is less natural, such as `risk-on`, `higher for longer`, `AI capex`, `soft landing`, `IPO`, `spread`, and `duration`.
+5. Keep professional finance terms in the form a market professional would naturally say them, such as `risk-on`, `higher for longer`, `AI capex`, `soft landing`, `IPO`, `ECM`, `ROIC`, `ECB`, `HKMA`, `Nasdaq`, `spread`, and `duration`.
 6. For company news, first explain what the company does and why markets care, then give figures.
 7. Use calibrated judgment: "market may read this as", "I would first treat this as a signal", "the more important point is".
 8. Avoid the correction-style sentence pattern "不是A，而是B".
 9. Keep URLs out of the spoken script; preserve source links in show notes.
-10. Use TTS-friendly spoken names for proper nouns: write `标普五百指数` instead of `S&P 500`, `道琼斯指数` instead of `Dow` or `Dow Jones`, `纳斯达克` instead of `Nasdaq`, `罗素二千指数` instead of `Russell 2000`, `美联储` instead of `Fed`, `欧洲央行` instead of `ECB`, `香港金管局` instead of `HKMA`, `股权资本市场` instead of `ECM`, `对冲基金` instead of `HF`, and `投行业务` instead of `IB`.
+10. Use TTS-friendly spoken names only where raw text sounds unnatural: write `标普500指数` instead of `S&P 500`, `标普` instead of standalone `S&P`, `道指` instead of `Dow` or `Dow Jones`, and `hedge fund` instead of `HF`. Do not over-translate common finance acronyms such as `ECB`, `HKMA`, `ROIC`, `ECM`, `IB`, or `Nasdaq`.
 
 ## Humanizer-zh Pass
 

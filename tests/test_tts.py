@@ -51,12 +51,16 @@ def test_save_edge_tts_normalizes_market_terms_for_pronunciation(monkeypatch, tm
 
     output = tmp_path / "voice.mp3"
     tts.save_edge_tts(
-        "S&P 500 跌了，Dow 跌 695 点，S&P Dow Jones Indices 没有改规则，Fed hike odds 和 S&P 指数规则也要读清楚。",
+        "S&P 500 跌了，Dow 跌 695 点，S&P Dow Jones Indices 没有改规则，"
+        "Fed hike odds、Nasdaq、ECB、HKMA、ROIC、ECM、HF 和 IB 都在稿子里，"
+        "S&P 指数规则也要读顺。",
         output,
         voice="zh-CN-YunyangNeural",
     )
 
     assert calls[0]["text"] == (
-        "标普五百指数 跌了，道琼斯指数 跌 695 点，"
-        "标普道琼斯指数公司 没有改规则，美联储加息概率 和 标普 指数规则也要读清楚。"
+        "标普500指数 跌了，道指 跌 695 点，"
+        "标普道琼斯指数公司 没有改规则，"
+        "Fed hike odds、Nasdaq、ECB、HKMA、ROIC、ECM、hedge fund 和 IB 都在稿子里，"
+        "标普指数规则也要读顺。"
     )
