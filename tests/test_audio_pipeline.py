@@ -72,8 +72,8 @@ def test_mix_intro_with_voice_invokes_ffmpeg_with_intro_duck_and_normal_voice_en
 
     assert output_path.read_bytes() == b"mixed"
     command = " ".join(calls[0])
-    assert "adelay=5900|5900" in command
-    assert "afade=t=out:st=5.9" in command
+    assert "adelay=6700|6700" in command
+    assert "afade=t=out:st=5.2:d=1.2" in command
     assert "afade=t=in" not in command
     assert "amix=inputs=2:duration=longest" in command
 

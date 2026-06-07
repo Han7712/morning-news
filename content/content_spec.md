@@ -10,7 +10,7 @@ Length: target 10 to 11 minutes. Start with 2,500 to 3,000 Chinese characters an
 
 Voice: `zh-CN-YunyangNeural`.
 
-Language: Chinese first. Use English only for market terms where Chinese is less natural, such as `risk-on`, `higher for longer`, `AI capex`, `soft landing`, `ECM`, `IPO`, `spread`, and `duration`.
+Language: Chinese first. Use English only for market terms where Chinese is less natural, such as `risk-on`, `higher for longer`, `AI capex`, `soft landing`, `IPO`, `spread`, and `duration`. For TTS-sensitive proper nouns, write the spoken form in Chinese: `S&P 500` -> `标普五百指数`, `Dow` or `Dow Jones` -> `道琼斯指数`, `Nasdaq` -> `纳斯达克`, `Russell 2000` -> `罗素二千指数`, `Fed` -> `美联储`, `ECB` -> `欧洲央行`, `HKMA` -> `香港金管局`, `ECM` -> `股权资本市场`, `HF` -> `对冲基金`, `IB` -> `投行业务`.
 
 Research standard:
 - Search current public news and official materials from the last 24 to 48 hours.
@@ -58,5 +58,5 @@ Source handling:
 
 Audio handling:
 - TTS should receive only the clean spoken body, not headings, markdown links, research notes, or source URLs.
-- The final MP3 should include the standard `assets/audio/intro-bed.mp3` music bed with voice fading in from the intro.
+- The final MP3 should include the standard `assets/audio/intro-bed.mp3` music bed, with the music fading down before the voice enters at normal volume.
 - Normal production episodes must pass the duration gate: target 10 to 11 minutes, with the builder allowing a 9:30 to 12:00 operational band.
