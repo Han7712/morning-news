@@ -17,11 +17,11 @@
   "show_notes_path": "show_notes/2026-06-08-funding-costs-ai-oil-friction.md",
   "voice": "zh-CN-YunyangNeural",
   "duration_seconds": 664,
-  "file_size_bytes": 15954093,
+  "file_size_bytes": 15950061,
   "main_market_line": "今天的主线是，强非农把市场拉回 higher for longer，AI capex 和 SpaceX IPO 把资金需求推到台前；OPEC+ 的小幅增产挡不住 Hormuz 风险，香港账户审查和欧洲加息预期说明，下周交易要先问资金成本和流动性通道，再问增长故事。",
   "source_count": 14,
   "research_quality": {
-    "candidate_count": 14,
+    "candidate_count": 12,
     "selected_count": 4,
     "rejected_count": 4,
     "has_rejected_rationale": true,
