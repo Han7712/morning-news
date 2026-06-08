@@ -15,6 +15,12 @@
     "conditional-risk-on-ai-hk-flows",
     "sample-oil-rates-ai"
   ],
+  "editorial_policy": {
+    "avoid_stale_repetition": true,
+    "standing_instruction_date": "2026-06-08",
+    "summary": "Do not repeat recent topics such as nonfarm payrolls, Broadcom, AI capex, Hong Kong account scrutiny, or similar prior packages without material new information. On quiet days, broaden into business, politics, geopolitics, regulation, trade, technology policy, supply chains, credit, ECM/IPO/M&A, China/Hong Kong, Asia, and other market-relevant international topics before shortening the episode. Do not pad stale material just to reach the normal duration target.",
+    "thin_news_duration_profile": "compact"
+  },
   "selected_voice": "zh-CN-YunyangNeural",
   "selected_rate": "+0%"
 }

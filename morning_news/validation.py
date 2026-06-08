@@ -7,6 +7,8 @@ BANNED_CORRECTION_RE = re.compile("不" + "是" + r".{0,80}?" + "而" + "是")
 DASH_BREAK_CHARS = {chr(0x2014), chr(0x2013), chr(0x2015)}
 NORMAL_DURATION_MIN_SECONDS = 570
 NORMAL_DURATION_MAX_SECONDS = 720
+COMPACT_DURATION_MIN_SECONDS = 420
+COMPACT_DURATION_MAX_SECONDS = NORMAL_DURATION_MIN_SECONDS
 SAMPLE_DURATION_EXCEPTIONS = {("2026-06-03", "sample-oil-rates-ai")}
 URL_RE = re.compile(r"https?://[^\s)>]+")
 REQUIRED_METADATA_FIELDS = {
@@ -20,6 +22,7 @@ REQUIRED_METADATA_FIELDS = {
     "show_notes_path",
     "voice",
     "duration_seconds",
+    "duration_profile",
     "file_size_bytes",
     "main_market_line",
     "source_count",
@@ -58,6 +61,9 @@ def validate_metadata(metadata: dict[str, Any]) -> None:
         if not isinstance(value, (int, float)) or value <= 0:
             raise ValueError(f"Metadata {field} must be positive")
 
+    if metadata["duration_profile"] not in {"normal", "compact"}:
+        raise ValueError("Metadata duration_profile must be normal or compact")
+
     if not str(metadata["main_market_line"]).strip():
         raise ValueError("Metadata main_market_line must be nonempty")
 
@@ -94,6 +100,9 @@ def validate_metadata(metadata: dict[str, Any]) -> None:
     if research_quality.get("has_editorial_qa") is not True:
         raise ValueError("Metadata research_quality.has_editorial_qa must be true")
 
+    if research_quality.get("has_freshness_check") is not True:
+        raise ValueError("Metadata research_quality.has_freshness_check must be true")
+
     source_url_count = research_quality.get("source_url_count")
     if not isinstance(source_url_count, int) or source_url_count < 2:
         raise ValueError("Metadata research_quality.source_url_count must be at least 2")
@@ -102,18 +111,33 @@ def validate_metadata(metadata: dict[str, Any]) -> None:
         raise ValueError("Metadata research_quality.source_count_matches must be true")
 
 
-def validate_duration_seconds(date: str, slug: str, duration_seconds: int) -> None:
+def validate_duration_seconds(
+    date: str,
+    slug: str,
+    duration_seconds: int,
+    duration_profile: str = "normal",
+) -> None:
     if (date, slug) in SAMPLE_DURATION_EXCEPTIONS:
         return
-    if duration_seconds < NORMAL_DURATION_MIN_SECONDS:
+
+    if duration_profile == "compact":
+        min_seconds = COMPACT_DURATION_MIN_SECONDS
+        max_seconds = COMPACT_DURATION_MAX_SECONDS
+    elif duration_profile == "normal":
+        min_seconds = NORMAL_DURATION_MIN_SECONDS
+        max_seconds = NORMAL_DURATION_MAX_SECONDS
+    else:
+        raise ValueError(f"unknown duration_profile: {duration_profile}")
+
+    if duration_seconds < min_seconds:
         raise ValueError(
-            f"duration_seconds below normal range: {duration_seconds} < "
-            f"{NORMAL_DURATION_MIN_SECONDS}"
+            f"duration_seconds below {duration_profile} range: {duration_seconds} < "
+            f"{min_seconds}"
         )
-    if duration_seconds > NORMAL_DURATION_MAX_SECONDS:
+    if duration_seconds > max_seconds:
         raise ValueError(
-            f"duration_seconds above normal range: {duration_seconds} > "
-            f"{NORMAL_DURATION_MAX_SECONDS}"
+            f"duration_seconds above {duration_profile} range: {duration_seconds} > "
+            f"{max_seconds}"
         )
 
 
@@ -141,6 +165,7 @@ def research_quality_from_show_notes(
         "has_selected_relevance": _has_selected_relevance(selected_bullets),
         "has_sources_section": has_sources_section,
         "has_editorial_qa": _has_editorial_qa(show_notes),
+        "has_freshness_check": _has_freshness_check(show_notes),
         "source_url_count": len(source_urls),
         "source_count_matches": source_count_matches,
     }
@@ -175,6 +200,8 @@ def validate_research_notes(
         violations.append("missing_humanizer_zh_pass")
     if not quality["has_editorial_qa"]:
         violations.append("missing_editorial_qa")
+    if not quality["has_freshness_check"]:
+        violations.append("missing_freshness_check")
     if not _has_main_market_line(show_notes):
         violations.append("missing_main_market_line")
     if main_market_line and not _main_market_line_matches(show_notes, main_market_line):
@@ -302,6 +329,36 @@ def _has_editorial_qa(show_notes: str) -> bool:
         and ("selection" in lowered or "selected" in lowered or "筛选" in section_body)
         and ("reject" in lowered or "rationale" in lowered or "排除" in section_body)
         and ("source count" in lowered or "source-count" in lowered or "来源数量" in section_body)
+    )
+
+
+def _has_freshness_check(show_notes: str) -> bool:
+    section_body = _section_body(show_notes, "Freshness and Repetition Check")
+    if section_body is None:
+        return False
+    lowered = section_body.lower()
+    return (
+        ("recent" in lowered or "近期" in section_body or "state.json" in lowered)
+        and ("overlap" in lowered or "重复" in section_body or "重合" in section_body)
+        and (
+            "material increment" in lowered
+            or "new increment" in lowered
+            or "新增" in section_body
+            or "增量" in section_body
+        )
+        and (
+            "broaden" in lowered
+            or "wider" in lowered
+            or "拓宽" in section_body
+            or "扩大" in section_body
+        )
+        and (
+            "padding" in lowered
+            or "not padded" in lowered
+            or "不凑" in section_body
+            or "不填充" in section_body
+            or "不硬凑" in section_body
+        )
     )
 
 

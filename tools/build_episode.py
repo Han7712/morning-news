@@ -48,6 +48,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--rate", default="+0%")
     parser.add_argument("--main-market-line", required=True)
     parser.add_argument("--source-count", required=True, type=int)
+    parser.add_argument(
+        "--duration-profile",
+        choices=("normal", "compact"),
+        default="normal",
+        help="Use compact only for thin-news days after a documented broadened search.",
+    )
     parser.add_argument("--intro-bed", default=DEFAULT_INTRO_BED)
     parser.add_argument("--site-url", default=DEFAULT_SITE_URL)
     return parser.parse_args()
@@ -377,7 +383,12 @@ def main() -> int:
                     raise BuildStageError("afinfo", error) from error
 
                 try:
-                    validate_duration_seconds(args.date, args.slug, duration_seconds)
+                    validate_duration_seconds(
+                        args.date,
+                        args.slug,
+                        duration_seconds,
+                        duration_profile=args.duration_profile,
+                    )
                 except Exception as error:
                     raise BuildStageError("duration_validation", error) from error
 
@@ -394,6 +405,7 @@ def main() -> int:
                     "show_notes_path": f"show_notes/{asset_stem}.md",
                     "voice": args.voice,
                     "duration_seconds": duration_seconds,
+                    "duration_profile": args.duration_profile,
                     "file_size_bytes": staged_audio.stat().st_size,
                     "main_market_line": args.main_market_line,
                     "source_count": args.source_count,
@@ -470,6 +482,7 @@ def main() -> int:
             "feed_path": str(feed_path),
             "index_path": str(index_path),
             "duration_seconds": duration_seconds,
+            "duration_profile": args.duration_profile,
             "file_size_bytes": audio_path.stat().st_size,
             "voice": args.voice,
             "rate": args.rate,

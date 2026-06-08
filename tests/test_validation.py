@@ -21,6 +21,7 @@ def valid_metadata() -> dict[str, object]:
         "show_notes_path": "show_notes/2026-06-04-rates-oil-ai.md",
         "voice": "zh-CN-YunyangNeural",
         "duration_seconds": 640,
+        "duration_profile": "normal",
         "file_size_bytes": 3840000,
         "main_market_line": "Growth is resilient but oil is raising the inflation cost.",
         "source_count": 9,
@@ -34,6 +35,7 @@ def valid_metadata() -> dict[str, object]:
             "has_selected_relevance": True,
             "has_sources_section": True,
             "has_editorial_qa": True,
+            "has_freshness_check": True,
             "source_url_count": 9,
             "source_count_matches": True,
         },
@@ -122,6 +124,12 @@ def good_show_notes() -> str:
         "## Rejected Stories\n"
         "- One-off small-cap move: Rejected because liquidity was thin, source quality was weak, "
         "and the story had no clear cross-asset read-through.\n\n"
+        "## Freshness and Repetition Check\n"
+        "- Recent-topic review: checked content/state.json recent main lines and recent slugs.\n"
+        "- Overlap decisions: no selected story repeats the prior nonfarm or AI capex package.\n"
+        "- Material increment: repeated macro context was kept only where new market pricing changed the read-through.\n"
+        "- Broadened search: reviewed geopolitics, regulation, credit, ECM, Asia, and business policy headlines.\n"
+        "- Padding check: script was not padded with stale material to reach the duration target.\n\n"
         "## Humanizer-zh Pass\n"
         "- Applied `/Users/han/.agents/skills/humanizer-zh/SKILL.md` after the first script draft.\n"
         "- Revised formulaic transitions and sentence rhythm before TTS.\n\n"
@@ -146,6 +154,7 @@ def test_validate_research_notes_accepts_source_backed_editorial_qa() -> None:
     assert quality["has_candidate_fields"] is True
     assert quality["has_selected_relevance"] is True
     assert quality["has_editorial_qa"] is True
+    assert quality["has_freshness_check"] is True
     assert quality["source_url_count"] == 9
     assert quality["source_count_matches"] is True
 
@@ -165,6 +174,22 @@ def test_validate_research_notes_rejects_missing_editorial_qa_and_source_mismatc
 
     assert "missing_editorial_qa" in violations
     assert "source_count_mismatch" in violations
+
+
+def test_validate_research_notes_rejects_missing_freshness_check() -> None:
+    notes = good_show_notes().replace(
+        "## Freshness and Repetition Check\n"
+        "- Recent-topic review: checked content/state.json recent main lines and recent slugs.\n"
+        "- Overlap decisions: no selected story repeats the prior nonfarm or AI capex package.\n"
+        "- Material increment: repeated macro context was kept only where new market pricing changed the read-through.\n"
+        "- Broadened search: reviewed geopolitics, regulation, credit, ECM, Asia, and business policy headlines.\n"
+        "- Padding check: script was not padded with stale material to reach the duration target.\n\n",
+        "",
+    )
+
+    violations = validate_research_notes(notes, declared_source_count=9)
+
+    assert "missing_freshness_check" in violations
 
 
 def test_validate_research_notes_rejects_main_market_line_mismatch() -> None:
@@ -192,6 +217,7 @@ def test_validate_research_notes_requires_candidate_source_urls() -> None:
 def test_validate_duration_seconds_accepts_normal_episode_and_sample_exception() -> None:
     validate_duration_seconds("2026-06-04", "rates-oil-ai", 640)
     validate_duration_seconds("2026-06-03", "sample-oil-rates-ai", 340)
+    validate_duration_seconds("2026-06-08", "thin-news-day", 500, duration_profile="compact")
 
 
 def test_validate_duration_seconds_rejects_short_or_long_normal_episode() -> None:
@@ -200,6 +226,9 @@ def test_validate_duration_seconds_rejects_short_or_long_normal_episode() -> Non
 
     with pytest.raises(ValueError, match="above normal range"):
         validate_duration_seconds("2026-06-04", "rates-oil-ai", 900)
+
+    with pytest.raises(ValueError, match="above compact range"):
+        validate_duration_seconds("2026-06-08", "thin-news-day", 640, duration_profile="compact")
 
 
 def test_detect_script_violations_catches_style_and_quality_issues() -> None:

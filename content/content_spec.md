@@ -6,7 +6,7 @@ Tone: buy-side morning meeting colleague. Calm, direct, source-aware, and explan
 
 Schedule context: episodes are generated at 05:45 Asia/Hong_Kong so the U.S. regular equity-market close and early post-close coverage are usually available.
 
-Length: target 10 to 11 minutes. Start with 2,500 to 3,000 Chinese characters and adjust after measuring full-script duration with `zh-CN-YunyangNeural`.
+Length: target 10 to 11 minutes on normal news-flow days. Start with 2,500 to 3,000 Chinese characters and adjust after measuring full-script duration with `zh-CN-YunyangNeural`. If fresh, material headlines are genuinely thin after a broadened search, do not pad the episode by repeating stale points. Use the compact duration profile, target roughly 7 to 9.5 minutes, and document the thin-news judgment in show notes.
 
 Voice: `zh-CN-YunyangNeural`.
 
@@ -22,17 +22,24 @@ Research standard:
 Research gate:
 - Build an internal candidate list of 8 to 12 credible source-backed stories when the news flow permits.
 - For every candidate, record source URL, timestamp or publication date when visible, source credibility, asset-class relevance, and market / HF / IB relevance.
+- Before final selection, review `content/state.json` recent main lines and recent slugs, plus the latest local show notes when needed, to identify repeated themes.
+- For any candidate that overlaps a recent episode theme, record the material new information, new price action, new policy step, new company disclosure, or new market implication. If there is no material increment, reject it or mention it only as brief context.
+- When the market-news tape is quiet, broaden the search before repeating old material. Eligible broader topics include business, politics, geopolitics, regulation, trade, technology policy, supply chains, energy security, credit, ECM/IPO/M&A, China/Hong Kong policy, Asia regional markets, and international events with a credible market or business transmission channel.
 - Select 2 to 4 main stories for the spoken episode.
 - Record why each selected story matters today and its market / HF / IB angle.
 - Record why tempting but weak stories were rejected when useful.
 - Exclude minor isolated stock moves, vague opinion pieces, promotional content, and unconfirmed rumors unless market impact is clear and the uncertainty is explicit.
+- Do not reuse a prior main line, headline pairing, or company/data combination just to fill the target duration.
 - Keep an `## Editorial QA` section in show notes covering candidate fields, selected-story relevance, rejected-story rationale, and source-count consistency.
+- Keep an `## Freshness and Repetition Check` section in show notes covering recent-topic review, overlap decisions, material increments for repeated themes, broadened-search categories used on quiet days, and confirmation that the script was not padded with stale material.
 
 Script structure:
 - Do not use a fixed daily template.
 - First determine the day's most important market main line.
 - Use that main line to connect macro data, asset prices, company events, financing, China/Hong Kong, and Asia when relevant.
 - Do not force a fixed "today's watchlist" ending.
+- If a prior topic remains important but has no fresh increment, say it once as context and move on. The episode should prioritize new information, changed interpretation, or a wider but still market-relevant business story.
+- On thin-news days, a shorter, sharper episode is preferred over a full-length script that repeats the same nonfarm-payrolls, Broadcom, AI capex, or similar prior points without new evidence.
 
 Humanizer pass:
 - After the first script draft is complete and before TTS/build, run the script through `humanizer-zh`.

@@ -23,10 +23,14 @@ Research quality requirements:
 2. Include the U.S. market close and after-close headline scan when available at 05:45 HKT.
 3. Build a candidate list of 8 to 12 credible source-backed stories when the news flow permits.
 4. For each candidate story, capture source URL, timestamp or publication date when visible, source credibility, asset-class relevance, and market / HF / IB relevance.
-5. Select 2 to 4 genuinely important stories for the spoken episode.
-6. Reject scattered minor items, vague opinion pieces, promotional content, stale topics, low-credibility aggregations, and isolated single-stock moves unless market impact is clearly material.
-7. Preserve a rejected-story rationale for tempting but excluded stories.
-8. If source evidence is thin or conflicting, say so in the research notes and either exclude the story or present it with calibrated language.
+5. Review `content/state.json` recent main lines and recent slugs before locking the main line. If needed, skim the latest local show notes to avoid repeating the same selected-story package.
+6. For any candidate that overlaps the last few episodes, capture the specific material increment: new official data, new market pricing, new policy action, new company disclosure, new financing implication, or a meaningfully changed market read-through.
+7. If a repeated topic has no material increment, reject it or use it only as short context. Do not make it a main story just to reach the duration target.
+8. If high-quality financial headlines are thin, broaden the search before repeating stale material. Eligible broader topics include business, politics, geopolitics, regulation, trade, technology policy, supply chains, energy security, credit, ECM/IPO/M&A, China/Hong Kong policy, Asia regional markets, and international events with a credible market or business transmission channel.
+9. Select 2 to 4 genuinely important stories for the spoken episode.
+10. Reject scattered minor items, vague opinion pieces, promotional content, stale topics, low-credibility aggregations, and isolated single-stock moves unless market impact is clearly material.
+11. Preserve a rejected-story rationale for tempting but excluded stories.
+12. If source evidence is thin or conflicting, say so in the research notes and either exclude the story or present it with calibrated language.
 
 ## Script
 
@@ -34,7 +38,7 @@ Write a listening-first Chinese podcast script, not a read-aloud report.
 
 Script requirements:
 
-1. Target 10 to 11 minutes, roughly 2,500 to 3,000 Chinese characters.
+1. Target 10 to 11 minutes, roughly 2,500 to 3,000 Chinese characters, on normal news-flow days. If fresh material remains thin after broadened research, use a compact episode rather than padding stale material; target roughly 7 to 9.5 minutes and build with `--duration-profile compact`.
 2. Tone: buy-side morning meeting colleague, not professional announcer.
 3. First determine the day's main market line, then use it to connect macro data, asset prices, company events, financing, China/Hong Kong, and Asia where relevant.
 4. Do not use a fixed daily template and do not force a fixed "today's watchlist" ending.
@@ -44,6 +48,8 @@ Script requirements:
 8. Avoid the correction-style sentence pattern "不是A，而是B".
 9. Keep URLs out of the spoken script; preserve source links in show notes.
 10. Use TTS-friendly spoken names only where raw text sounds unnatural: write `标普500指数` instead of `S&P 500`, `标普` instead of standalone `S&P`, `道指` instead of `Dow` or `Dow Jones`, and `hedge fund` instead of `HF`. Do not over-translate common finance acronyms such as `ECB`, `HKMA`, `ROIC`, `ECM`, `IB`, or `Nasdaq`.
+11. If nonfarm payrolls, Broadcom, AI capex, Hong Kong account scrutiny, oil supply, or any other recent theme appears again, explicitly verify the new increment first. Without new increment, keep it as one-sentence background or leave it out.
+12. Do not stretch the script with repeated explanations when the news tape is quiet. Broaden the topic set first; if still thin, publish compact and explain the editorial call in show notes.
 
 ## Humanizer-zh Pass
 
@@ -72,6 +78,7 @@ The show notes must include:
 - `## Candidate Stories`
 - `## Selected Stories`
 - `## Rejected Stories`
+- `## Freshness and Repetition Check`
 - `## Humanizer-zh Pass`
 - `## Editorial QA` covering candidate fields, selected-story relevance, rejected-story rationale, and source-count consistency.
 - `## Sources`
@@ -95,9 +102,12 @@ Use this command shape, preserving the attached form for rate values:
   --rate=+0% \
   --main-market-line "<main line>" \
   --source-count <number> \
+  --duration-profile normal \
   --intro-bed assets/audio/intro-bed.mp3 \
   --site-url https://Han7712.github.io/morning-news
 ```
+
+Use `--duration-profile compact` only when the `## Freshness and Repetition Check` section documents that fresh, material headlines were thin after a broadened search and that stale topics were not used to pad the script.
 
 ## Failure Behavior
 

@@ -54,6 +54,12 @@ def valid_show_notes(tmp_path: Path) -> Path:
         "## Rejected Stories\n"
         "- Minor single-stock move: Rejected because impact was narrow, source quality was weak, "
         "and it had no cross-asset read-through.\n\n"
+        "## Freshness and Repetition Check\n"
+        "- Recent-topic review: checked content/state.json recent main lines and recent slugs.\n"
+        "- Overlap decisions: Broadcom and AI capex overlap was allowed only with a new market read-through.\n"
+        "- Material increment: repeated macro context was tied to new pricing and financing implications.\n"
+        "- Broadened search: reviewed geopolitics, regulation, credit, ECM, Asia, and business policy headlines.\n"
+        "- Padding check: script was not padded with stale material to reach the duration target.\n\n"
         "## Humanizer-zh Pass\n"
         "- Applied `/Users/han/.agents/skills/humanizer-zh/SKILL.md` after the first script draft.\n"
         "- Revised formulaic transitions and sentence rhythm before TTS.\n\n"
@@ -147,6 +153,7 @@ def test_successful_build_publishes_complete_episode_package(tmp_path: Path, mon
     assert metadata["research_quality"]["selected_count"] == 3
     assert metadata["research_quality"]["humanizer_zh_passed"] is True
     assert metadata["research_quality"]["has_editorial_qa"] is True
+    assert metadata["research_quality"]["has_freshness_check"] is True
     assert metadata["research_quality"]["source_count_matches"] is True
     assert (tmp_path / "docs/feed.xml").read_text(encoding="utf-8").count("<item>") == 1
     assert "Sources:" not in spoken_inputs[0]
@@ -312,6 +319,46 @@ def test_duration_gate_failure_preserves_existing_feed(tmp_path: Path, monkeypat
     assert report["ok"] is False
     assert report["stage"] == "duration_validation"
     assert feed_path.read_text(encoding="utf-8") == "<rss>existing</rss>"
+
+
+def test_compact_duration_profile_accepts_thin_news_episode(tmp_path: Path, monkeypatch) -> None:
+    script_path = long_script(tmp_path)
+    show_notes_path = valid_show_notes(tmp_path)
+    configure_cli(
+        monkeypatch,
+        tmp_path,
+        script_path,
+        show_notes_path,
+        "--duration-profile",
+        "compact",
+    )
+
+    monkeypatch.setattr(
+        build_episode,
+        "save_edge_tts",
+        lambda _text, output_path, **_kwargs: output_path.write_bytes(b"voice"),
+    )
+    monkeypatch.setattr(
+        build_episode,
+        "mix_intro_with_voice",
+        lambda _voice_path, _intro_path, output_path: output_path.write_bytes(b"mixed"),
+    )
+    monkeypatch.setattr(build_episode, "read_duration_seconds", lambda _path: 500)
+
+    exit_code = build_episode.main()
+
+    metadata = json.loads(
+        (tmp_path / "docs/metadata/2026-06-04.json").read_text(encoding="utf-8")
+    )
+    report = json.loads(
+        (tmp_path / "docs/reports/2026-06-04-delivery_report.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert exit_code == 0
+    assert metadata["duration_profile"] == "compact"
+    assert report["duration_profile"] == "compact"
+    assert report["duration_seconds"] == 500
 
 
 def test_same_date_different_slug_is_rejected_before_tts(tmp_path: Path, monkeypatch) -> None:
