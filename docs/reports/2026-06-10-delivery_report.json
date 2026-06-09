@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "date": "2026-06-10",
+  "audio_path": "/Users/han/Code/morning-news/docs/audio/2026-06-10-us-tech-china-trade-indonesia-ma.mp3",
+  "script_path": "/Users/han/Code/morning-news/docs/scripts/2026-06-10-us-tech-china-trade-indonesia-ma.md",
+  "show_notes_path": "/Users/han/Code/morning-news/docs/show_notes/2026-06-10-us-tech-china-trade-indonesia-ma.md",
+  "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-10.json",
+  "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Code/morning-news/docs/index.html",
+  "duration_seconds": 620,
+  "duration_profile": "normal",
+  "file_size_bytes": 14886189,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，美国技术股回撤没有打碎风险偏好，却把市场从单一 AI 故事拉回更朴素的三个问题：美债和 CPI 怎么定价，China trade 能不能继续托住全球供应链，EM 和医药并购还有没有真实资金愿意进场。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}

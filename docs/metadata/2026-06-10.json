@@ -1,0 +1,39 @@
+{
+  "date": "2026-06-10",
+  "slug": "us-tech-china-trade-indonesia-ma",
+  "title": "2026-06-10 技术股降温与真实资金",
+  "summary": "美股技术股回撤但市场 breadth 未崩，中国贸易数据支撑亚洲供应链，印尼加息守汇率，GSK-Nuvalent 现金并购显示 healthcare M&A 仍有买方资金。",
+  "keywords": [
+    "US equities",
+    "CPI",
+    "China trade",
+    "Indonesia rupiah",
+    "healthcare M&A",
+    "GSK",
+    "Nuvalent"
+  ],
+  "audio_path": "audio/2026-06-10-us-tech-china-trade-indonesia-ma.mp3",
+  "script_path": "scripts/2026-06-10-us-tech-china-trade-indonesia-ma.md",
+  "show_notes_path": "show_notes/2026-06-10-us-tech-china-trade-indonesia-ma.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 620,
+  "duration_profile": "normal",
+  "file_size_bytes": 14886189,
+  "main_market_line": "今天的主线是，美国技术股回撤没有打碎风险偏好，却把市场从单一 AI 故事拉回更朴素的三个问题：美债和 CPI 怎么定价，China trade 能不能继续托住全球供应链，EM 和医药并购还有没有真实资金愿意进场。",
+  "source_count": 13,
+  "research_quality": {
+    "candidate_count": 12,
+    "selected_count": 4,
+    "rejected_count": 4,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "has_freshness_check": true,
+    "source_url_count": 13,
+    "source_count_matches": true
+  }
+}
