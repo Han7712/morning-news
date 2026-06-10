@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "date": "2026-06-11",
+  "audio_path": "/Users/han/Code/morning-news/docs/audio/2026-06-11-cpi-oil-oracle-rate-reset.mp3",
+  "script_path": "/Users/han/Code/morning-news/docs/scripts/2026-06-11-cpi-oil-oracle-rate-reset.md",
+  "show_notes_path": "/Users/han/Code/morning-news/docs/show_notes/2026-06-11-cpi-oil-oracle-rate-reset.md",
+  "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-11.json",
+  "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Code/morning-news/docs/index.html",
+  "duration_seconds": 577,
+  "duration_profile": "normal",
+  "file_size_bytes": 13866093,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，CPI和油价把市场从AI涨幅争论拉回通胀和资金成本：美股现金盘进入risk-off，Oracle盘后证明AI infrastructure订单仍强但更耗现金，中国PPI、日欧央行压力和亚洲股市回撤一起提醒我们，全球资产正在重算duration、能源传导和外部需求质量。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2026-06-11",
+  "slug": "cpi-oil-oracle-rate-reset",
+  "title": "2026-06-11 通胀回潮与AI资金审计",
+  "summary": "美国CPI和油价把市场拉回通胀与资金成本，Oracle盘后显示AI infrastructure订单强但更耗现金，中国PPI和日欧央行压力提示全球duration重新定价。",
+  "keywords": [
+    "CPI",
+    "oil",
+    "Oracle",
+    "AI capex",
+    "China PPI",
+    "ECB",
+    "BOJ",
+    "duration"
+  ],
+  "audio_path": "audio/2026-06-11-cpi-oil-oracle-rate-reset.mp3",
+  "script_path": "scripts/2026-06-11-cpi-oil-oracle-rate-reset.md",
+  "show_notes_path": "show_notes/2026-06-11-cpi-oil-oracle-rate-reset.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 577,
+  "duration_profile": "normal",
+  "file_size_bytes": 13866093,
+  "main_market_line": "今天的主线是，CPI和油价把市场从AI涨幅争论拉回通胀和资金成本：美股现金盘进入risk-off，Oracle盘后证明AI infrastructure订单仍强但更耗现金，中国PPI、日欧央行压力和亚洲股市回撤一起提醒我们，全球资产正在重算duration、能源传导和外部需求质量。",
+  "source_count": 13,
+  "research_quality": {
+    "candidate_count": 12,
+    "selected_count": 4,
+    "rejected_count": 5,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "has_freshness_check": true,
+    "source_url_count": 13,
+    "source_count_matches": true
+  }
+}
