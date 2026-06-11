@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "date": "2026-06-12",
+  "audio_path": "/Users/han/Code/morning-news/docs/audio/2026-06-12-iran-ppi-spacex-ipo.mp3",
+  "script_path": "/Users/han/Code/morning-news/docs/scripts/2026-06-12-iran-ppi-spacex-ipo.md",
+  "show_notes_path": "/Users/han/Code/morning-news/docs/show_notes/2026-06-12-iran-ppi-spacex-ipo.md",
+  "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-12.json",
+  "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Code/morning-news/docs/index.html",
+  "duration_seconds": 626,
+  "duration_profile": "normal",
+  "file_size_bytes": 15038829,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，伊朗风险降温让美股从通胀冲击里反弹，油价回落给risk-on一口气；但BLS的PPI和ECB加息提醒市场，能源冲击已经穿过企业成本，rate relief还没有真正回来。资金端同时被SpaceX的750亿美元IPO和Adobe盘后反应检验：稀缺叙事能拿到钱，现金流资产还得证明增长、治理和资本纪律。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}

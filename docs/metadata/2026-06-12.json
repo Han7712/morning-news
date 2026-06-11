@@ -1,0 +1,40 @@
+{
+  "date": "2026-06-12",
+  "slug": "iran-ppi-spacex-ipo",
+  "title": "2026-06-12 油价喘息与SpaceX定价",
+  "summary": "伊朗风险降温带动美股和小盘反弹，油价回落压低美债收益率；但美国PPI和ECB加息限制rate relief，SpaceX创纪录IPO和Adobe盘后反应继续检验AI与ECM风险预算。",
+  "keywords": [
+    "Iran",
+    "PPI",
+    "ECB",
+    "SpaceX IPO",
+    "Adobe",
+    "oil",
+    "risk-on",
+    "ECM"
+  ],
+  "audio_path": "audio/2026-06-12-iran-ppi-spacex-ipo.mp3",
+  "script_path": "scripts/2026-06-12-iran-ppi-spacex-ipo.md",
+  "show_notes_path": "show_notes/2026-06-12-iran-ppi-spacex-ipo.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 626,
+  "duration_profile": "normal",
+  "file_size_bytes": 15038829,
+  "main_market_line": "今天的主线是，伊朗风险降温让美股从通胀冲击里反弹，油价回落给risk-on一口气；但BLS的PPI和ECB加息提醒市场，能源冲击已经穿过企业成本，rate relief还没有真正回来。资金端同时被SpaceX的750亿美元IPO和Adobe盘后反应检验：稀缺叙事能拿到钱，现金流资产还得证明增长、治理和资本纪律。",
+  "source_count": 15,
+  "research_quality": {
+    "candidate_count": 15,
+    "selected_count": 4,
+    "rejected_count": 7,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "has_freshness_check": true,
+    "source_url_count": 15,
+    "source_count_matches": true
+  }
+}
