@@ -1,0 +1,40 @@
+{
+  "date": "2026-06-14",
+  "slug": "oil-spacex-china-credit",
+  "title": "2026-06-14 油价松动与信用冷暖",
+  "summary": "油价因美伊协议希望回落，SpaceX首日交易验证ECM需求；但美国通胀、下周FOMC和中国信用结构仍约束duration与风险偏好。",
+  "keywords": [
+    "oil",
+    "Iran",
+    "SpaceX",
+    "ECM",
+    "FOMC",
+    "CPI",
+    "China credit",
+    "AI supply chain"
+  ],
+  "audio_path": "audio/2026-06-14-oil-spacex-china-credit.mp3",
+  "script_path": "scripts/2026-06-14-oil-spacex-china-credit.md",
+  "show_notes_path": "show_notes/2026-06-14-oil-spacex-china-credit.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 653,
+  "duration_profile": "normal",
+  "file_size_bytes": 15675309,
+  "main_market_line": "今天的主线是，周五美股给了市场一个risk-on收尾，油价因为美伊协议希望继续回落，SpaceX首日交易又把AI和太空融资重新点燃；但这不等于全面放松，CPI、PPI和下周FOMC还压着duration，中国5月社融靠企业票据和政府债支撑，居民贷款仍在收缩。所以周一亚洲盘要看的，是油价、融资需求和真实信用能不能一起稳住。",
+  "source_count": 15,
+  "research_quality": {
+    "candidate_count": 12,
+    "selected_count": 4,
+    "rejected_count": 6,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "has_freshness_check": true,
+    "source_url_count": 15,
+    "source_count_matches": true
+  }
+}

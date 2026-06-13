@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "date": "2026-06-14",
+  "audio_path": "/Users/han/Code/morning-news/docs/audio/2026-06-14-oil-spacex-china-credit.mp3",
+  "script_path": "/Users/han/Code/morning-news/docs/scripts/2026-06-14-oil-spacex-china-credit.md",
+  "show_notes_path": "/Users/han/Code/morning-news/docs/show_notes/2026-06-14-oil-spacex-china-credit.md",
+  "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-14.json",
+  "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Code/morning-news/docs/index.html",
+  "duration_seconds": 653,
+  "duration_profile": "normal",
+  "file_size_bytes": 15675309,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，周五美股给了市场一个risk-on收尾，油价因为美伊协议希望继续回落，SpaceX首日交易又把AI和太空融资重新点燃；但这不等于全面放松，CPI、PPI和下周FOMC还压着duration，中国5月社融靠企业票据和政府债支撑，居民贷款仍在收缩。所以周一亚洲盘要看的，是油价、融资需求和真实信用能不能一起稳住。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}
