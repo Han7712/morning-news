@@ -7,12 +7,12 @@
   "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-16.json",
   "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
   "index_path": "/Users/han/Code/morning-news/docs/index.html",
-  "duration_seconds": 589,
+  "duration_seconds": 599,
   "duration_profile": "normal",
-  "file_size_bytes": 14138541,
+  "file_size_bytes": 14379885,
   "voice": "zh-CN-YunyangNeural",
   "rate": "+0%",
   "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
-  "main_market_line": "今天的主线是，美伊霍尔木兹deal把油价和通胀尾部风险往下打，美股和亚洲市场先交易risk-on；但Fed week、偏弱的美国工业生产、AI memory股的拥挤反弹，以及Fox-Roku大额M&A的折价反应都在提醒，市场真正重排的是能源风险下降后的duration、融资成本和风险预算。",
+  "main_market_line": "今天的主线是，市场把霍尔木兹风险从通胀尾部风险，重新定价成一次可以交易的rate relief。油价跌到三个月低位，美股、亚洲股市和AI链条一起risk-on；但协议细节、能源恢复速度和本周FOMC，还会决定duration到底能松多久。公司层面，Nvidia债券需求和Fox收购Roku说明融资窗口打开了，只是买方会更挑资金用途、现金流质量和并购后的资本结构。香港第一份五年规划，则把本地资产重新放进大湾区、创新科技和产业政策框架里看。",
   "site_url": "https://Han7712.github.io/morning-news"
 }
