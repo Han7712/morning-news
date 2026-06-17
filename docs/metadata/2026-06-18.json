@@ -1,0 +1,40 @@
+{
+  "date": "2026-06-18",
+  "slug": "fed-repricing-ai-trade-resilience",
+  "title": "2026-06-18 Fed重估与AI贸易韧性",
+  "summary": "Fed维持利率但上修通胀和政策利率路径，美国零售仍有韧性；亚洲AI贸易和PBOC人民币工具给增长与金融基础设施留下结构性线索。",
+  "keywords": [
+    "Fed",
+    "higher for longer",
+    "retail sales",
+    "AI trade",
+    "BOJ",
+    "RMB",
+    "Hong Kong",
+    "duration"
+  ],
+  "audio_path": "audio/2026-06-18-fed-repricing-ai-trade-resilience.mp3",
+  "script_path": "scripts/2026-06-18-fed-repricing-ai-trade-resilience.md",
+  "show_notes_path": "show_notes/2026-06-18-fed-repricing-ai-trade-resilience.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 603,
+  "duration_profile": "normal",
+  "file_size_bytes": 14479533,
+  "main_market_line": "今天的主线是，Fed在Warsh第一次会议上把市场从rate relief拉回higher for longer：利率不动，但SEP把2026年政策利率中位数抬到3.8%，通胀中位数升到3.6%，美股和短端收益率随即重估。与此同时，美国零售、新加坡和日本贸易、PBOC人民币工具说明增长和金融基础设施没有断，真正被压缩的是duration、融资窗口和对AI链条的估值容忍度。",
+  "source_count": 15,
+  "research_quality": {
+    "candidate_count": 15,
+    "selected_count": 4,
+    "rejected_count": 6,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "has_freshness_check": true,
+    "source_url_count": 15,
+    "source_count_matches": true
+  }
+}

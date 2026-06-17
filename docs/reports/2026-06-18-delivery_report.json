@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "date": "2026-06-18",
+  "stage": "audio_mix",
+  "error_type": "FileNotFoundError",
+  "message": "voice audio not found: /Users/han/Code/morning-news/docs/morning-news-build-kn0hf85d/voice/2026-06-18-fed-repricing-ai-trade-resilience-voice.mp3",
+  "preserve_existing": true
+}

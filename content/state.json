@@ -1,19 +1,19 @@
 {
-  "last_episode_date": "2026-06-16",
-  "last_slug": "oil-duration-risk-budget",
+  "last_episode_date": "2026-06-18",
+  "last_slug": "fed-repricing-ai-trade-resilience",
   "recent_main_lines": [
+    "今天的主线是，Fed在Warsh第一次会议上把市场从rate relief拉回higher for longer：利率不动，但SEP把2026年政策利率中位数抬到3.8%，通胀中位数升到3.6%，美股和短端收益率随即重估。与此同时，美国零售、新加坡和日本贸易、PBOC人民币工具说明增长和金融基础设施没有断，真正被压缩的是duration、融资窗口和对AI链条的估值容忍度。",
     "今天的主线是，市场把霍尔木兹风险从通胀尾部风险，重新定价成一次可以交易的rate relief。油价跌到三个月低位，美股、亚洲股市和AI链条一起risk-on；但协议细节、能源恢复速度和本周FOMC，还会决定duration到底能松多久。公司层面，Nvidia债券需求和Fox收购Roku说明融资窗口打开了，只是买方会更挑资金用途、现金流质量和并购后的资本结构。香港第一份五年规划，则把本地资产重新放进大湾区、创新科技和产业政策框架里看。",
     "今天的主线是，周五美股给了市场一个risk-on收尾，油价因为美伊协议希望继续回落，SpaceX首日交易又把AI和太空融资重新点燃；但这不等于全面放松，CPI、PPI和下周FOMC还压着duration，中国5月社融靠企业票据和政府债支撑，居民贷款仍在收缩。所以周一亚洲盘要看的，是油价、融资需求和真实信用能不能一起稳住。",
     "今天的主线是，伊朗风险降温让美股从通胀冲击里反弹，油价回落给risk-on一口气；但BLS的PPI和ECB加息提醒市场，能源冲击已经穿过企业成本，rate relief还没有真正回来。资金端同时被SpaceX的750亿美元IPO和Adobe盘后反应检验：稀缺叙事能拿到钱，现金流资产还得证明增长、治理和资本纪律。",
-    "今天的主线是，CPI和油价把市场从AI涨幅争论拉回通胀和资金成本：美股现金盘进入risk-off，Oracle盘后证明AI infrastructure订单仍强但更耗现金，中国PPI、日欧央行压力和亚洲股市回撤一起提醒我们，全球资产正在重算duration、能源传导和外部需求质量。",
-    "今天的主线是，美国技术股回撤没有打碎风险偏好，却把市场从单一 AI 故事拉回更朴素的三个问题：美债和 CPI 怎么定价，China trade 能不能继续托住全球供应链，EM 和医药并购还有没有真实资金愿意进场。"
+    "今天的主线是，CPI和油价把市场从AI涨幅争论拉回通胀和资金成本：美股现金盘进入risk-off，Oracle盘后证明AI infrastructure订单仍强但更耗现金，中国PPI、日欧央行压力和亚洲股市回撤一起提醒我们，全球资产正在重算duration、能源传导和外部需求质量。"
   ],
   "used_slugs": [
+    "fed-repricing-ai-trade-resilience",
     "oil-duration-risk-budget",
     "oil-spacex-china-credit",
     "iran-ppi-spacex-ipo",
-    "cpi-oil-oracle-rate-reset",
-    "us-tech-china-trade-indonesia-ma"
+    "cpi-oil-oracle-rate-reset"
   ],
   "editorial_policy": {
     "avoid_stale_repetition": true,
