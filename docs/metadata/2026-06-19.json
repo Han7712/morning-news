@@ -1,0 +1,39 @@
+{
+  "date": "2026-06-19",
+  "slug": "risk-rebuild-energy-chips-funding",
+  "title": "2026-06-19 风险回补与资金成本再算账",
+  "summary": "隔夜美股在Fed鹰派余震后反弹，Hormuz油轮通行恢复压低能源风险，但初请失业金、BoE和HKMA提醒资金成本仍硬；Intel/Apple催化、Singapore electronics出口、China Resources New Energy IPO和HKMA/HKEX结算试点决定风险回补的质量。",
+  "keywords": [
+    "risk-on",
+    "oil",
+    "Hormuz",
+    "rates",
+    "semiconductors",
+    "ECM",
+    "Hong Kong"
+  ],
+  "audio_path": "audio/2026-06-19-risk-rebuild-energy-chips-funding.mp3",
+  "script_path": "scripts/2026-06-19-risk-rebuild-energy-chips-funding.md",
+  "show_notes_path": "show_notes/2026-06-19-risk-rebuild-energy-chips-funding.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 594,
+  "duration_profile": "normal",
+  "file_size_bytes": 14264685,
+  "main_market_line": "今天的主线是，隔夜市场在Fed鹰派余震后重新买回risk-on，标普500指数涨1.1%，Nasdaq涨1.9%，Russell 2000涨2.1%；美国和伊朗的初步协议开始落地，Hormuz油轮通行恢复，能源通胀的尾部压力被压下来一截。可资金成本没有跟着股指一起松。美国初请失业金还在22万上下，BoE和HKMA都在提醒利率风险，今天最重要的交易是少一点追涨冲动，先分清哪些资产受益于油价降温，哪些资产靠真实订单和融资能力支撑。",
+  "source_count": 12,
+  "research_quality": {
+    "candidate_count": 12,
+    "selected_count": 4,
+    "rejected_count": 6,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "has_freshness_check": true,
+    "source_url_count": 12,
+    "source_count_matches": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "date": "2026-06-19",
+  "audio_path": "/Users/han/Code/morning-news/docs/audio/2026-06-19-risk-rebuild-energy-chips-funding.mp3",
+  "script_path": "/Users/han/Code/morning-news/docs/scripts/2026-06-19-risk-rebuild-energy-chips-funding.md",
+  "show_notes_path": "/Users/han/Code/morning-news/docs/show_notes/2026-06-19-risk-rebuild-energy-chips-funding.md",
+  "metadata_path": "/Users/han/Code/morning-news/docs/metadata/2026-06-19.json",
+  "feed_path": "/Users/han/Code/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Code/morning-news/docs/index.html",
+  "duration_seconds": 594,
+  "duration_profile": "normal",
+  "file_size_bytes": 14264685,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Code/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，隔夜市场在Fed鹰派余震后重新买回risk-on，标普500指数涨1.1%，Nasdaq涨1.9%，Russell 2000涨2.1%；美国和伊朗的初步协议开始落地，Hormuz油轮通行恢复，能源通胀的尾部压力被压下来一截。可资金成本没有跟着股指一起松。美国初请失业金还在22万上下，BoE和HKMA都在提醒利率风险，今天最重要的交易是少一点追涨冲动，先分清哪些资产受益于油价降温，哪些资产靠真实订单和融资能力支撑。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}
