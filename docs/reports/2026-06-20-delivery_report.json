@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "date": "2026-06-20",
+  "audio_path": "/Users/han/Desktop/Morning Info/projects/morning-news/docs/audio/2026-06-20-holiday-liquidity-dollar-oil.mp3",
+  "script_path": "/Users/han/Desktop/Morning Info/projects/morning-news/docs/scripts/2026-06-20-holiday-liquidity-dollar-oil.md",
+  "show_notes_path": "/Users/han/Desktop/Morning Info/projects/morning-news/docs/show_notes/2026-06-20-holiday-liquidity-dollar-oil.md",
+  "metadata_path": "/Users/han/Desktop/Morning Info/projects/morning-news/docs/metadata/2026-06-20.json",
+  "feed_path": "/Users/han/Desktop/Morning Info/projects/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Desktop/Morning Info/projects/morning-news/docs/index.html",
+  "duration_seconds": 573,
+  "duration_profile": "normal",
+  "file_size_bytes": 13761837,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Desktop/Morning Info/projects/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，美国股债因为Juneteenth没有给我们一个常规收盘，香港、上海和台湾也放端午假，薄盘里真正讲话的是美元和油。美元指数冲到一年高位，Brent重新回到80美元附近，日股创了纪录，欧美和亚洲其他市场却没有一起放松。这个组合说明市场没有进入安静假期，Fed后的higher for longer、伊朗谈判的不确定、英国财政压力和亚洲IPO窗口，正在同一张风险预算表里互相挤。今天别把没有美股收盘误读成没有信号，重点看谁能在低流动性里守住价格，谁还需要资金成本配合。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-06-20",
+  "slug": "holiday-liquidity-dollar-oil",
+  "title": "2026-06-20 假期薄盘与油汇再定价",
+  "summary": "美国和香港假期削弱现金盘信号，美元与油价成为核心定价；Fed、BoE和英国财政维持higher-for-longer压力，Micron、Jio和Momenta测试AI与亚洲ECM窗口。",
+  "keywords": [
+    "Juneteenth",
+    "美元",
+    "油价",
+    "Fed",
+    "BoE",
+    "Micron",
+    "Jio",
+    "Momenta",
+    "ECM"
+  ],
+  "audio_path": "audio/2026-06-20-holiday-liquidity-dollar-oil.mp3",
+  "script_path": "scripts/2026-06-20-holiday-liquidity-dollar-oil.md",
+  "show_notes_path": "show_notes/2026-06-20-holiday-liquidity-dollar-oil.md",
+  "voice": "zh-CN-YunyangNeural",
+  "duration_seconds": 573,
+  "duration_profile": "normal",
+  "file_size_bytes": 13761837,
+  "main_market_line": "今天的主线是，美国股债因为Juneteenth没有给我们一个常规收盘，香港、上海和台湾也放端午假，薄盘里真正讲话的是美元和油。美元指数冲到一年高位，Brent重新回到80美元附近，日股创了纪录，欧美和亚洲其他市场却没有一起放松。这个组合说明市场没有进入安静假期，Fed后的higher for longer、伊朗谈判的不确定、英国财政压力和亚洲IPO窗口，正在同一张风险预算表里互相挤。今天别把没有美股收盘误读成没有信号，重点看谁能在低流动性里守住价格，谁还需要资金成本配合。",
+  "source_count": 12,
+  "research_quality": {
+    "candidate_count": 12,
+    "selected_count": 4,
+    "rejected_count": 6,
+    "has_rejected_rationale": true,
+    "has_credible_sources": true,
+    "humanizer_zh_passed": true,
+    "has_candidate_fields": true,
+    "has_selected_relevance": true,
+    "has_sources_section": true,
+    "has_editorial_qa": true,
+    "has_freshness_check": true,
+    "source_url_count": 12,
+    "source_count_matches": true
+  }
+}
