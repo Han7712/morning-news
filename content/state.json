@@ -1,19 +1,19 @@
 {
-  "last_episode_date": "2026-06-20",
-  "last_slug": "holiday-liquidity-dollar-oil",
+  "last_episode_date": "2026-07-02",
+  "last_slug": "data-proof-ai-monetization",
   "recent_main_lines": [
+    "今天的主线是，二季度那波risk-on没有被一夜推翻，但市场已经从追涨切到要证据。美股新季度第一天高开低走，Dow只跌0.03%，标普500指数跌0.22%，Nasdaq跌0.66%；ADP显示6月私人就业只增加9.8万人，ISM制造业还在扩张，只是速度慢一点，今晚的非农就成了利率和美元的下一道坎。Warsh在Sintra继续讲2%通胀目标，也不给市场提前答案。公司端，Meta靠一条出售多余AI compute的报道大涨8.8%，CoreWeave和Nebius反而跌得很重。亚洲端，日元卡在162附近，40年低位压力还在；中国PMI扩张，但出口订单和国内需求温度不同。今天要看的，是这轮风险偏好能不能被数据、现金流和融资簿记接住。",
     "今天的主线是，美国股债因为Juneteenth没有给我们一个常规收盘，香港、上海和台湾也放端午假，薄盘里真正讲话的是美元和油。美元指数冲到一年高位，Brent重新回到80美元附近，日股创了纪录，欧美和亚洲其他市场却没有一起放松。这个组合说明市场没有进入安静假期，Fed后的higher for longer、伊朗谈判的不确定、英国财政压力和亚洲IPO窗口，正在同一张风险预算表里互相挤。今天别把没有美股收盘误读成没有信号，重点看谁能在低流动性里守住价格，谁还需要资金成本配合。",
     "今天的主线是，隔夜市场在Fed鹰派余震后重新买回risk-on，标普500指数涨1.1%，Nasdaq涨1.9%，Russell 2000涨2.1%；美国和伊朗的初步协议开始落地，Hormuz油轮通行恢复，能源通胀的尾部压力被压下来一截。可资金成本没有跟着股指一起松。美国初请失业金还在22万上下，BoE和HKMA都在提醒利率风险，今天最重要的交易是少一点追涨冲动，先分清哪些资产受益于油价降温，哪些资产靠真实订单和融资能力支撑。",
     "今天的主线是，Fed在Warsh第一次会议上把市场从rate relief拉回higher for longer：利率不动，但SEP把2026年政策利率中位数抬到3.8%，通胀中位数升到3.6%，美股和短端收益率随即重估。与此同时，美国零售、新加坡和日本贸易、PBOC人民币工具说明增长和金融基础设施没有断，真正被压缩的是duration、融资窗口和对AI链条的估值容忍度。",
-    "今天的主线是，市场把霍尔木兹风险从通胀尾部风险，重新定价成一次可以交易的rate relief。油价跌到三个月低位，美股、亚洲股市和AI链条一起risk-on；但协议细节、能源恢复速度和本周FOMC，还会决定duration到底能松多久。公司层面，Nvidia债券需求和Fox收购Roku说明融资窗口打开了，只是买方会更挑资金用途、现金流质量和并购后的资本结构。香港第一份五年规划，则把本地资产重新放进大湾区、创新科技和产业政策框架里看。",
-    "今天的主线是，周五美股给了市场一个risk-on收尾，油价因为美伊协议希望继续回落，SpaceX首日交易又把AI和太空融资重新点燃；但这不等于全面放松，CPI、PPI和下周FOMC还压着duration，中国5月社融靠企业票据和政府债支撑，居民贷款仍在收缩。所以周一亚洲盘要看的，是油价、融资需求和真实信用能不能一起稳住。"
+    "今天的主线是，市场把霍尔木兹风险从通胀尾部风险，重新定价成一次可以交易的rate relief。油价跌到三个月低位，美股、亚洲股市和AI链条一起risk-on；但协议细节、能源恢复速度和本周FOMC，还会决定duration到底能松多久。公司层面，Nvidia债券需求和Fox收购Roku说明融资窗口打开了，只是买方会更挑资金用途、现金流质量和并购后的资本结构。香港第一份五年规划，则把本地资产重新放进大湾区、创新科技和产业政策框架里看。"
   ],
   "used_slugs": [
+    "data-proof-ai-monetization",
     "holiday-liquidity-dollar-oil",
     "risk-rebuild-energy-chips-funding",
     "fed-repricing-ai-trade-resilience",
-    "oil-duration-risk-budget",
-    "oil-spacex-china-credit"
+    "oil-duration-risk-budget"
   ],
   "editorial_policy": {
     "avoid_stale_repetition": true,

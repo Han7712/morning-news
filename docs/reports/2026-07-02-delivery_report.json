@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "date": "2026-07-02",
+  "audio_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/morning-news/docs/audio/2026-07-02-data-proof-ai-monetization.mp3",
+  "script_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/morning-news/docs/scripts/2026-07-02-data-proof-ai-monetization.md",
+  "show_notes_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/morning-news/docs/show_notes/2026-07-02-data-proof-ai-monetization.md",
+  "metadata_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/morning-news/docs/metadata/2026-07-02.json",
+  "feed_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/morning-news/docs/feed.xml",
+  "index_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/morning-news/docs/index.html",
+  "duration_seconds": 622,
+  "duration_profile": "normal",
+  "file_size_bytes": 14928813,
+  "voice": "zh-CN-YunyangNeural",
+  "rate": "+0%",
+  "intro_bed_path": "/Users/han/Desktop/AI Workplace/Morning Info/projects/morning-news/assets/audio/intro-bed.mp3",
+  "main_market_line": "今天的主线是，二季度那波risk-on没有被一夜推翻，但市场已经从追涨切到要证据。美股新季度第一天高开低走，Dow只跌0.03%，标普500指数跌0.22%，Nasdaq跌0.66%；ADP显示6月私人就业只增加9.8万人，ISM制造业还在扩张，只是速度慢一点，今晚的非农就成了利率和美元的下一道坎。Warsh在Sintra继续讲2%通胀目标，也不给市场提前答案。公司端，Meta靠一条出售多余AI compute的报道大涨8.8%，CoreWeave和Nebius反而跌得很重。亚洲端，日元卡在162附近，40年低位压力还在；中国PMI扩张，但出口订单和国内需求温度不同。今天要看的，是这轮风险偏好能不能被数据、现金流和融资簿记接住。",
+  "site_url": "https://Han7712.github.io/morning-news"
+}
